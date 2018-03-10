@@ -1,0 +1,34 @@
+{
+  "name": "Portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Expromtum/Portfolio.git",
+  "author": "Marina Sokurenko <stagger@mail.ru>",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server --env development",
+    "build": "webpack --env production",
+    "serv": "static build"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "normalize.css": "^8.0.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "file-loader": "^1.1.11",
+    "css-loader": "^0.28.10",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-plugin": "^3.0.4",
+    "node-sass": "^4.7.2",
+    "node-static": "^0.7.10",
+    "pug": "^2.0.0-rc.4",
+    "pug-loader": "^2.2.1",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.2",
+    "webpack": "^3.11.0",
+    "webpack-cli": "^2.0.10",
+    "webpack-dev-server": "^3.1.0",
+    "webpack-merge": "^4.1.2"
+  }
+}
