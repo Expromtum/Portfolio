@@ -1,0 +1,10 @@
+- var svg = "/assets/img/sprite.svg"
+
+mixin icon(linkClassName, iconName, url, color)
+    a(href!=url class=linkClassName)
+        svg(class="icon icon-" + iconName role="img")
+            use(xlink:href!=`../socials/icons/${iconName}.svg#${iconName}`)
+    //- mod = mod || ''
+    //a(href="#{url}" class=`.${linkClassName}` .${linkClassName}--${iconName}`)
+        //svg(class="icon icon-" + iconName role="img")
+            //use(xlink:href="#{svg}##{iconName}")

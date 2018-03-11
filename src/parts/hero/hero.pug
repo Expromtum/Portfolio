@@ -1,0 +1,29 @@
+//include ..\..\helpers\_mixins.pug
+section.section.hero
+    .hero__img
+        //img(src=require("./hero_bg.jpg") width="500")
+    ul.socials.hero__socials
+        -
+            var socials = [
+            {
+            title:'vk',
+            url:'vkontakte.com'
+            },{
+            title:'inst',
+            url:'inst.com'
+            },{
+            title:'inst',//'fb',
+            url:'facebook.com'
+            }
+            ];
+
+        each socials_item in socials
+            li.socials__item
+                svg(class=".socials__link" role="img")
+                    use(xlink:href="#vk" fill="#ffffff")
+                svg(class=".socials__link" role="img")
+                    use(xlink:href="#in" fill="#000000")
+                //- +icon('.socials__link', `${socials_item.title}`, `${socials_item.url}`, `#ffffff`)
+                //- a(href!=`${socials_item.url}` class=`.socials__link .socials__link--${socials_item.title}`)
+                    //- svg.socials__img(viewBox="0 0 25 25")
+                        use(xlink:href=`./components/socials/icons/${socials_item.title}.svg#${socials_item.title}` fill=`#ffffff`)

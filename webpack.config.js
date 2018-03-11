@@ -11,6 +11,7 @@ const css = require('./webpack/css');
 const extractCSS = require('./webpack/css.extract');
 const uglifyJS = require('./webpack/js.uglify');
 const images = require('./webpack/images');
+const sprite = require('./webpack/svg.sprite');
 
 const PATHS = {
     source: path.join(__dirname, 'src'),
@@ -55,10 +56,18 @@ const common = merge([
     // sass(),
     // css()
     extractCSS(),
-    images()
+    images(),
+    sprite()
 ]);
 
 module.exports = function(env) {
+    if (!env) {                //startw
+        return merge([
+                common,
+                devserver()
+            ]
+        )
+    }
     if (env === 'production'){  //build
         return merge([
             common,
