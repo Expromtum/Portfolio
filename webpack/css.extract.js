@@ -1,4 +1,5 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const autoPrefixer = require('autoprefixer');
 
 module.exports = function (paths) {
     return {
@@ -12,8 +13,27 @@ module.exports = function (paths) {
                         publicPath: '../', //Нужен для того, чтобы пути к картинкам для фоновых изображениях в css файлах были правильными после сборки
                         fallback: 'style-loader',  // Применяется, если ExtractTextPlugin не может завершить работу
                         use: [
-                            'css-loader',
-                            'sass-loader'
+                            {
+                                loader: 'css-loader',
+                                options: {
+                                    sourceMap: true
+                                }
+                            }, {
+                                loader: "postcss-loader",
+                                options: {
+                                    plugins: [
+                                        autoPrefixer({
+                                            browsers:['ie >= 8', 'last 4 version']
+                                        })
+                                    ],
+                                    sourceMap: true
+                                }
+                            }, {
+                                loader: "sass-loader",
+                                options: {
+                                    sourceMap: true
+                                }
+                            }
                         ],
                     }),
                 },
@@ -22,7 +42,14 @@ module.exports = function (paths) {
                     include: paths,
                     use: ExtractTextPlugin.extract({
                         fallback: 'style-loader',
-                        use: 'css-loader',
+                        use: [
+                            {
+                                loader: 'css-loader',
+                                options: {
+                                    sourceMap: true
+                                }
+                            }
+                        ]
                     }),
                 },
             ],

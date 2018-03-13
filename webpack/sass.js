@@ -16,16 +16,16 @@ module.exports = function (paths) {
 
                     use: [{
                         loader: "style-loader"// 3 Добавляет стили в DOM-дерево при помощи тега style
-                    }, {
+                    },  {
                         loader: "css-loader", // 2 Добавляет css-модули в граф зависимостей
                         options: {
                             sourceMap: true
                         }
-                    }, {
+                    },  {
                         loader: "sass-loader", // 1 Компиляция cscc в css
                         options: {
                             sourceMap: true
-                        }
+                       }
                     }]
                 }
             ]
