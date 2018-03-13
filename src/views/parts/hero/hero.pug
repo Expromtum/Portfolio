@@ -1,0 +1,24 @@
+section.section.hero
+    .hero__img
+        img(src=require("./../../../images/hero_bg.jpg") width="500")
+    ul.socials.hero__socials
+        -
+            var socials = [
+            {
+            title: 'vk',
+            url: 'vkontakte.com'
+            },{
+            title: 'in',
+            url: 'inst.com'
+            // },{
+            // title:'fb',//'fb',
+            // url:'facebook.com'
+            },{
+            title: 'github',
+            url: 'github.com'
+            }
+            ];
+
+        each socials_item in socials
+            li.socials__item
+                +svg-in-sprite(socials_item.title, "socials__icon")

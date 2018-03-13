@@ -1,0 +1,107 @@
+html {
+  font-size: 16px;
+
+  //@include laptop {
+  //  font-size: 14px;
+  //}
+  //
+  //@include tablets {
+  //  font-size: 13px;
+  //}
+  //
+  //@include phones_portrait {
+  //  font-size: 12px;
+  //}
+  //
+  //@include phones_landscape {
+  //  font-size: 12px;
+  //}
+}
+
+body,
+html {
+  height: 100%;
+  padding: 0;
+  //min-width: $min-width;
+  //font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+  //background-color: $color-bg-side;
+  position: relative;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
+  height: 100%;
+  overflow: hidden;
+}
+
+.maincontent {
+  height: 100%;
+}
+
+.site-section {
+  height: 100%;
+ // background-color: $color-bg-side;
+  margin: 0 auto;
+  overflow: hidden;
+
+ &_centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.container {
+  width: 95%;
+  max-width: rem(1500px);
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+p,
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+}

@@ -22,8 +22,8 @@ const common = merge([
     {
         //Точки входа
         entry: {
-            'index': PATHS.source + '/pages/index/index.js',
-            'blog': PATHS.source + '/pages/blog/blog.js'
+            'index': PATHS.source + '/views/pages/index/index.js',
+            'blog': PATHS.source + '/views/pages/blog/blog.js'
         },
 
         // то, что получим на выходе
@@ -39,13 +39,13 @@ const common = merge([
                 //title: 'Portfolio',
                 filename: 'index.html',
                 chunks: ['index', 'common'],
-                template: PATHS.source + '/pages/index/index.pug'
+                template: PATHS.source + '/views/pages/index/index.pug'
             }),
             new HtmlWebpackPlugin({
                 //title: 'Portfolio-blog',
                 filename: 'blog.html',
                 chunks: ['blog', 'common'],
-                template: PATHS.source + '/pages/blog/blog.pug'
+                template: PATHS.source + '/views/pages/blog/blog.pug'
             }),
             new webpack.optimize.CommonsChunkPlugin({
                name: 'common' //Вынесем общий код в отдельный модуль с именем common
@@ -59,6 +59,8 @@ const common = merge([
     images(),
     sprite()
 ]);
+
+//TODO: plumber autoprefixer
 
 module.exports = function(env) {
     if (!env) {                //startw

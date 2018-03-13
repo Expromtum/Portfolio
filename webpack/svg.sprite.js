@@ -6,17 +6,28 @@ module.exports = function () {
         module: {
             rules: [
                 {
-                    test: /\.svg$/,
+                    test:  /\.svg$/, /*/\.svg((\?.*)?|$)/*/
                     use: [
                         {
                             loader: 'svg-sprite-loader',
                             options: {
-                                //extract: true,
-                                spriteFilename: 'icons-sprite.svg'
+                                extract: true,
+                                spriteFilename: 'images/sprite.svg'
                             }
-                        }/*,
-                        'svg-fill-loader'*//*,
-                        'svgo-loader'*/
+                        },
+                        {
+                            loader: 'svgo-loader',
+                            options: {
+                                plugins: [
+                                    {removeTitle: true},
+                                    {removeAttrs: { attrs: '(fill|stroke)' } },
+                                    {minifyStyles: false},
+                                    //{convertColors: {shorthex: false}},
+                                    {convertPathData: false},
+                                    {removeUselessDefs: false}
+                                ]
+                            }
+                        }
                     ]
                 }
             ]

@@ -11,7 +11,10 @@ module.exports = function (paths) {
                     use: ExtractTextPlugin.extract({ //ExtractTextPlugin заменяет style-loader
                         publicPath: '../', //Нужен для того, чтобы пути к картинкам для фоновых изображениях в css файлах были правильными после сборки
                         fallback: 'style-loader',  // Применяется, если ExtractTextPlugin не может завершить работу
-                        use: ['css-loader', 'sass-loader'],
+                        use: [
+                            'css-loader',
+                            'sass-loader'
+                        ],
                     }),
                 },
                 {

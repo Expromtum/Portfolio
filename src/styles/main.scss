@@ -1,0 +1,11 @@
+//colors
+$white: #efeee9;
+
+@import "~normalize.css";
+@import "config/variables";
+@import "config/media";
+@import "config/mixins";
+@import "layout/adjustment.scss";
+@import "layout/fonts";
+
+//@import "blocks/**/*.scss";
