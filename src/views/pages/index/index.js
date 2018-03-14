@@ -1,6 +1,8 @@
-import '../../../styles/main.scss';
+import './../main';
 import './index.scss';
-import '../../parts/hero/hero.js';
+import '../../parts/hero/hero';
+
+// import '../../../fonts/fontawesome-webfont.ttf';
 //import createMenu from '../../components/menu/menu';
 
 //var menu = createMenu(['Главная', 'Блог', 'Мои работы', 'Тест', 'Тест5'], 'menu');

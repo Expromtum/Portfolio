@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js run serv
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js run startw
 
 PATH: 
   C:\Users\Marina\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Marina\bin;C:\Program Files (x86)\Intel\iCLS Client;C:\Program Files\Intel\iCLS Client;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files\Hewlett-Packard\SimplePass;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Microsoft\Web Platform Installer;C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0;C:\Program Files (x86)\Windows Kits\8.0\Windows Performance Toolkit;C:\Program Files\Microsoft SQL Server\110\Tools\Binn;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn;C:\Program Files\Microsoft SQL Server\110\DTS\Binn;C:\Program Files (x86)\Skype\Phone;C:\Program Files\Git\cmd;C:\Program Files\nodejs;C:\Program Files (x86)\Yarn\bin;C:\Users\Marina\AppData\Local\GitHubDesktop\bin;C:\Users\Marina\AppData\Roaming\npm;G:\Дистрибутивы\tidy;C:\Users\Marina\AppData\Roaming\npm;C:\Users\Marina\AppData\Local\Yarn\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
@@ -28,6 +28,7 @@ npm manifest:
       "serv": "static build"
     },
     "dependencies": {
+      "babel-loader": "^7.1.4",
       "jquery": "^3.3.1",
       "normalize.css": "^8.0.0"
     },
@@ -36,9 +37,11 @@ npm manifest:
       "css-loader": "^0.28.10",
       "extract-text-webpack-plugin": "^3.0.2",
       "file-loader": "^1.1.11",
+      "fontface-loader": "^0.0.8",
       "html-webpack-plugin": "^3.0.4",
       "node-sass": "^4.7.2",
       "node-static": "^0.7.10",
+      "postcss-loader": "^2.1.1",
       "pug": "^2.0.0-rc.4",
       "pug-loader": "^2.2.1",
       "sass-loader": "^6.0.7",
@@ -222,7 +225,7 @@ Lockfile:
       delegates "^1.0.0"
       readable-stream "^2.0.6"
   
-  argparse@^1.0.7:
+  argparse@^1.0.6, argparse@^1.0.7:
     version "1.0.10"
     resolved "https://registry.yarnpkg.com/argparse/-/argparse-1.0.10.tgz#bcd6791ea5ae09725e17e5ad988134cd40b3d911"
     dependencies:
@@ -560,6 +563,14 @@ Lockfile:
     dependencies:
       babel-runtime "^6.22.0"
       babel-template "^6.24.1"
+  
+  babel-loader@^7.1.4:
+    version "7.1.4"
+    resolved "https://registry.yarnpkg.com/babel-loader/-/babel-loader-7.1.4.tgz#e3463938bd4e6d55d1c174c5485d406a188ed015"
+    dependencies:
+      find-cache-dir "^1.0.0"
+      loader-utils "^1.0.2"
+      mkdirp "^0.5.1"
   
   babel-messages@^6.23.0:
     version "6.23.0"
@@ -1050,6 +1061,10 @@ Lockfile:
     version "2.1.1"
     resolved "https://registry.yarnpkg.com/binaryextensions/-/binaryextensions-2.1.1.tgz#3209a51ca4a4ad541a3b8d3d6a6d5b83a2485935"
   
+  bindings@^1.2.1:
+    version "1.3.0"
+    resolved "https://registry.yarnpkg.com/bindings/-/bindings-1.3.0.tgz#b346f6ecf6a95f5a815c5839fc7cdb22502f1ed7"
+  
   blob@0.0.4:
     version "0.0.4"
     resolved "https://registry.yarnpkg.com/blob/-/blob-0.0.4.tgz#bcf13052ca54463f30f9fc7e95b9a47630a94921"
@@ -1273,6 +1288,12 @@ Lockfile:
       base64-js "^1.0.2"
       ieee754 "^1.1.4"
       isarray "^1.0.0"
+  
+  bufferstreams@^1.1.0:
+    version "1.1.3"
+    resolved "https://registry.yarnpkg.com/bufferstreams/-/bufferstreams-1.1.3.tgz#a8515ac024fa90e8fa7d58c11b13dea1f28abe72"
+    dependencies:
+      readable-stream "^2.0.2"
   
   builtin-modules@^1.0.0:
     version "1.1.1"
@@ -1811,6 +1832,18 @@ Lockfile:
   core-util-is@1.0.2, core-util-is@~1.0.0:
     version "1.0.2"
     resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
+  
+  cosmiconfig@^2.1.0, cosmiconfig@^2.1.1:
+    version "2.2.2"
+    resolved "https://registry.yarnpkg.com/cosmiconfig/-/cosmiconfig-2.2.2.tgz#6173cebd56fac042c1f4390edf7af6c07c7cb892"
+    dependencies:
+      is-directory "^0.3.1"
+      js-yaml "^3.4.3"
+      minimist "^1.2.0"
+      object-assign "^4.1.0"
+      os-homedir "^1.0.1"
+      parse-json "^2.2.0"
+      require-from-string "^1.1.0"
   
   create-ecdh@^4.0.0:
     version "4.0.0"
@@ -2889,6 +2922,17 @@ Lockfile:
       inherits "^2.0.1"
       readable-stream "^2.0.4"
   
+  fontface-loader@^0.0.8:
+    version "0.0.8"
+    resolved "https://registry.yarnpkg.com/fontface-loader/-/fontface-loader-0.0.8.tgz#a9370c3dfea1f3503003e7578d80b75194f574e2"
+    dependencies:
+      bluebird "^3.5.0"
+      loader-utils "^1.1.0"
+      ttf2eot "^2.0.0"
+      ttf2woff "^2.0.1"
+      ttf2woff2 "^2.0.3"
+      ttfinfo "^0.2.0"
+  
   for-in@^0.1.3:
     version "0.1.8"
     resolved "https://registry.yarnpkg.com/for-in/-/for-in-0.1.8.tgz#d8773908e31256109952b1fdb9b3fa867d2775e1"
@@ -3800,6 +3844,10 @@ Lockfile:
       is-data-descriptor "^1.0.0"
       kind-of "^6.0.2"
   
+  is-directory@^0.3.1:
+    version "0.3.1"
+    resolved "https://registry.yarnpkg.com/is-directory/-/is-directory-0.3.1.tgz#61339b6f2475fc772fd9c9d83f5c8575dc154ae1"
+  
   is-dotfile@^1.0.0:
     version "1.0.3"
     resolved "https://registry.yarnpkg.com/is-dotfile/-/is-dotfile-1.0.3.tgz#a6a2f32ffd2dfb04f5ca25ecd0f6b83cf798a1e1"
@@ -4069,6 +4117,13 @@ Lockfile:
   js-tokens@^3.0.0, js-tokens@^3.0.2:
     version "3.0.2"
     resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-3.0.2.tgz#9866df395102130e38f7f996bceb65443209c25b"
+  
+  js-yaml@^3.4.3:
+    version "3.11.0"
+    resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.11.0.tgz#597c1a8bd57152f26d622ce4117851a51f5ebaef"
+    dependencies:
+      argparse "^1.0.7"
+      esprima "^4.0.0"
   
   js-yaml@~3.10.0:
     version "3.10.0"
@@ -4541,6 +4596,10 @@ Lockfile:
     version "1.1.2"
     resolved "https://registry.yarnpkg.com/methods/-/methods-1.1.2.tgz#5529a4d67654134edcc5266656835b0f851afcee"
   
+  microbuffer@^1.0.0:
+    version "1.0.0"
+    resolved "https://registry.yarnpkg.com/microbuffer/-/microbuffer-1.0.0.tgz#8b3832ed40c87d51f47bb234913a698a756d19d2"
+  
   micromatch@2.3.11, micromatch@^2.1.5, micromatch@^2.3.11, micromatch@^2.3.7:
     version "2.3.11"
     resolved "https://registry.yarnpkg.com/micromatch/-/micromatch-2.3.11.tgz#86677c97d1720b363431d04d0d15293bd38c1565"
@@ -4766,7 +4825,7 @@ Lockfile:
     version "0.0.7"
     resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.7.tgz#3075ce93bc21b8fab43e1bc4da7e8115ed1e7bab"
   
-  nan@^2.3.0, nan@^2.3.2:
+  nan@^2.1.0, nan@^2.3.0, nan@^2.3.2:
     version "2.9.2"
     resolved "https://registry.yarnpkg.com/nan/-/nan-2.9.2.tgz#f564d75f5f8f36a6d9456cca7a6c4fe488ab7866"
   
@@ -4819,7 +4878,7 @@ Lockfile:
     version "0.7.1"
     resolved "https://registry.yarnpkg.com/node-forge/-/node-forge-0.7.1.tgz#9da611ea08982f4b94206b3beb4cc9665f20c300"
   
-  node-gyp@^3.3.1:
+  node-gyp@^3.0.3, node-gyp@^3.3.1:
     version "3.6.2"
     resolved "https://registry.yarnpkg.com/node-gyp/-/node-gyp-3.6.2.tgz#9bfbe54562286284838e750eac05295853fa1c60"
     dependencies:
@@ -5138,7 +5197,7 @@ Lockfile:
     version "0.3.0"
     resolved "https://registry.yarnpkg.com/os-browserify/-/os-browserify-0.3.0.tgz#854373c7f5c2315914fc9bfc6bd8238fdda1ec27"
   
-  os-homedir@^1.0.0:
+  os-homedir@^1.0.0, os-homedir@^1.0.1:
     version "1.0.2"
     resolved "https://registry.yarnpkg.com/os-homedir/-/os-homedir-1.0.2.tgz#ffbc4988336e0e833de0c168c7ef152121aa7fb3"
   
@@ -5229,7 +5288,7 @@ Lockfile:
     version "1.0.0"
     resolved "https://registry.yarnpkg.com/p-try/-/p-try-1.0.0.tgz#cbc79cdbaf8fd4228e13f621f2b1a237c1b207b3"
   
-  pako@~1.0.5:
+  pako@^1.0.0, pako@~1.0.5:
     version "1.0.6"
     resolved "https://registry.yarnpkg.com/pako/-/pako-1.0.6.tgz#0101211baa70c4bca4a0f63f2206e97b7dfaf258"
   
@@ -5476,6 +5535,38 @@ Lockfile:
     dependencies:
       urijs "^1.18.12"
   
+  postcss-load-config@^1.2.0:
+    version "1.2.0"
+    resolved "https://registry.yarnpkg.com/postcss-load-config/-/postcss-load-config-1.2.0.tgz#539e9afc9ddc8620121ebf9d8c3673e0ce50d28a"
+    dependencies:
+      cosmiconfig "^2.1.0"
+      object-assign "^4.1.0"
+      postcss-load-options "^1.2.0"
+      postcss-load-plugins "^2.3.0"
+  
+  postcss-load-options@^1.2.0:
+    version "1.2.0"
+    resolved "https://registry.yarnpkg.com/postcss-load-options/-/postcss-load-options-1.2.0.tgz#b098b1559ddac2df04bc0bb375f99a5cfe2b6d8c"
+    dependencies:
+      cosmiconfig "^2.1.0"
+      object-assign "^4.1.0"
+  
+  postcss-load-plugins@^2.3.0:
+    version "2.3.0"
+    resolved "https://registry.yarnpkg.com/postcss-load-plugins/-/postcss-load-plugins-2.3.0.tgz#745768116599aca2f009fad426b00175049d8d92"
+    dependencies:
+      cosmiconfig "^2.1.1"
+      object-assign "^4.1.0"
+  
+  postcss-loader@^2.1.1:
+    version "2.1.1"
+    resolved "https://registry.yarnpkg.com/postcss-loader/-/postcss-loader-2.1.1.tgz#208935af3b1d65e1abb1a870a912dd12e7b36895"
+    dependencies:
+      loader-utils "^1.1.0"
+      postcss "^6.0.0"
+      postcss-load-config "^1.2.0"
+      schema-utils "^0.4.0"
+  
   postcss-merge-idents@^2.1.5:
     version "2.1.7"
     resolved "https://registry.yarnpkg.com/postcss-merge-idents/-/postcss-merge-idents-2.1.7.tgz#4c5530313c08e1d5b3bbf3d2bbc747e278eea270"
@@ -5659,7 +5750,7 @@ Lockfile:
       source-map "^0.5.6"
       supports-color "^3.2.3"
   
-  postcss@^6.0.1:
+  postcss@^6.0.0, postcss@^6.0.1:
     version "6.0.19"
     resolved "https://registry.yarnpkg.com/postcss/-/postcss-6.0.19.tgz#76a78386f670b9d9494a655bf23ac012effd1555"
     dependencies:
@@ -6289,6 +6380,10 @@ Lockfile:
     version "2.1.1"
     resolved "https://registry.yarnpkg.com/require-directory/-/require-directory-2.1.1.tgz#8c64ad5fd30dab1c976e2344ffe7f792a6a6df42"
   
+  require-from-string@^1.1.0:
+    version "1.2.1"
+    resolved "https://registry.yarnpkg.com/require-from-string/-/require-from-string-1.2.1.tgz#529c9ccef27380adfec9a2f965b649bbee636418"
+  
   require-main-filename@^1.0.1:
     version "1.0.1"
     resolved "https://registry.yarnpkg.com/require-main-filename/-/require-main-filename-1.0.1.tgz#97f717b69d48784f5f526a6c5aa8ffdda055a4d1"
@@ -6449,7 +6544,7 @@ Lockfile:
     dependencies:
       ajv "^5.0.0"
   
-  schema-utils@^0.4.2, schema-utils@^0.4.3, schema-utils@^0.4.5:
+  schema-utils@^0.4.0, schema-utils@^0.4.2, schema-utils@^0.4.3, schema-utils@^0.4.5:
     version "0.4.5"
     resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-0.4.5.tgz#21836f0608aac17b78f9e3e24daff14a5ca13a3e"
     dependencies:
@@ -7327,6 +7422,34 @@ Lockfile:
     dependencies:
       glob "^6.0.4"
   
+  ttf2eot@^2.0.0:
+    version "2.0.0"
+    resolved "https://registry.yarnpkg.com/ttf2eot/-/ttf2eot-2.0.0.tgz#8e6337a585abd1608a0c84958ab483ce69f6654b"
+    dependencies:
+      argparse "^1.0.6"
+      microbuffer "^1.0.0"
+  
+  ttf2woff2@^2.0.3:
+    version "2.0.3"
+    resolved "https://registry.yarnpkg.com/ttf2woff2/-/ttf2woff2-2.0.3.tgz#5e020afe6e643287f3ad7687abed20fe654eb329"
+    dependencies:
+      bindings "^1.2.1"
+      bufferstreams "^1.1.0"
+      nan "^2.1.0"
+      node-gyp "^3.0.3"
+  
+  ttf2woff@^2.0.1:
+    version "2.0.1"
+    resolved "https://registry.yarnpkg.com/ttf2woff/-/ttf2woff-2.0.1.tgz#871832240024b09db9570904c7c1928b8057c969"
+    dependencies:
+      argparse "^1.0.6"
+      microbuffer "^1.0.0"
+      pako "^1.0.0"
+  
+  ttfinfo@^0.2.0:
+    version "0.2.0"
+    resolved "https://registry.yarnpkg.com/ttfinfo/-/ttfinfo-0.2.0.tgz#df4333d126619d5d3afb53fa45d51a73d02fefea"
+  
   tty-browserify@0.0.0:
     version "0.0.0"
     resolved "https://registry.yarnpkg.com/tty-browserify/-/tty-browserify-0.0.0.tgz#a157ba402da24e9bf957f9aa69d524eed42901a6"
@@ -8127,9 +8250,9 @@ Lockfile:
 
 Trace: 
   Error: Command failed.
-  Exit code: 3221225786
+  Exit code: 1
   Command: C:\Windows\system32\cmd.exe
-  Arguments: /d /s /c static build
+  Arguments: /d /s /c webpack --watch
   Directory: G:\Обучение LoftSchool\Portfolio
   Output:
   

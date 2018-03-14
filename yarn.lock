@@ -162,7 +162,7 @@ are-we-there-yet@~1.1.2:
     delegates "^1.0.0"
     readable-stream "^2.0.6"
 
-argparse@^1.0.7:
+argparse@^1.0.6, argparse@^1.0.7:
   version "1.0.10"
   resolved "https://registry.yarnpkg.com/argparse/-/argparse-1.0.10.tgz#bcd6791ea5ae09725e17e5ad988134cd40b3d911"
   dependencies:
@@ -500,6 +500,14 @@ babel-helpers@^6.24.1:
   dependencies:
     babel-runtime "^6.22.0"
     babel-template "^6.24.1"
+
+babel-loader@^7.1.4:
+  version "7.1.4"
+  resolved "https://registry.yarnpkg.com/babel-loader/-/babel-loader-7.1.4.tgz#e3463938bd4e6d55d1c174c5485d406a188ed015"
+  dependencies:
+    find-cache-dir "^1.0.0"
+    loader-utils "^1.0.2"
+    mkdirp "^0.5.1"
 
 babel-messages@^6.23.0:
   version "6.23.0"
@@ -990,6 +998,10 @@ binaryextensions@2:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/binaryextensions/-/binaryextensions-2.1.1.tgz#3209a51ca4a4ad541a3b8d3d6a6d5b83a2485935"
 
+bindings@^1.2.1:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/bindings/-/bindings-1.3.0.tgz#b346f6ecf6a95f5a815c5839fc7cdb22502f1ed7"
+
 blob@0.0.4:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/blob/-/blob-0.0.4.tgz#bcf13052ca54463f30f9fc7e95b9a47630a94921"
@@ -1213,6 +1225,12 @@ buffer@^4.3.0:
     base64-js "^1.0.2"
     ieee754 "^1.1.4"
     isarray "^1.0.0"
+
+bufferstreams@^1.1.0:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/bufferstreams/-/bufferstreams-1.1.3.tgz#a8515ac024fa90e8fa7d58c11b13dea1f28abe72"
+  dependencies:
+    readable-stream "^2.0.2"
 
 builtin-modules@^1.0.0:
   version "1.1.1"
@@ -2840,6 +2858,17 @@ flush-write-stream@^1.0.0:
   dependencies:
     inherits "^2.0.1"
     readable-stream "^2.0.4"
+
+fontface-loader@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/fontface-loader/-/fontface-loader-0.0.8.tgz#a9370c3dfea1f3503003e7578d80b75194f574e2"
+  dependencies:
+    bluebird "^3.5.0"
+    loader-utils "^1.1.0"
+    ttf2eot "^2.0.0"
+    ttf2woff "^2.0.1"
+    ttf2woff2 "^2.0.3"
+    ttfinfo "^0.2.0"
 
 for-in@^0.1.3:
   version "0.1.8"
@@ -4504,6 +4533,10 @@ methods@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/methods/-/methods-1.1.2.tgz#5529a4d67654134edcc5266656835b0f851afcee"
 
+microbuffer@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/microbuffer/-/microbuffer-1.0.0.tgz#8b3832ed40c87d51f47bb234913a698a756d19d2"
+
 micromatch@2.3.11, micromatch@^2.1.5, micromatch@^2.3.11, micromatch@^2.3.7:
   version "2.3.11"
   resolved "https://registry.yarnpkg.com/micromatch/-/micromatch-2.3.11.tgz#86677c97d1720b363431d04d0d15293bd38c1565"
@@ -4729,7 +4762,7 @@ mute-stream@0.0.7:
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.7.tgz#3075ce93bc21b8fab43e1bc4da7e8115ed1e7bab"
 
-nan@^2.3.0, nan@^2.3.2:
+nan@^2.1.0, nan@^2.3.0, nan@^2.3.2:
   version "2.9.2"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.9.2.tgz#f564d75f5f8f36a6d9456cca7a6c4fe488ab7866"
 
@@ -4782,7 +4815,7 @@ node-forge@0.7.1:
   version "0.7.1"
   resolved "https://registry.yarnpkg.com/node-forge/-/node-forge-0.7.1.tgz#9da611ea08982f4b94206b3beb4cc9665f20c300"
 
-node-gyp@^3.3.1:
+node-gyp@^3.0.3, node-gyp@^3.3.1:
   version "3.6.2"
   resolved "https://registry.yarnpkg.com/node-gyp/-/node-gyp-3.6.2.tgz#9bfbe54562286284838e750eac05295853fa1c60"
   dependencies:
@@ -5192,7 +5225,7 @@ p-try@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/p-try/-/p-try-1.0.0.tgz#cbc79cdbaf8fd4228e13f621f2b1a237c1b207b3"
 
-pako@~1.0.5:
+pako@^1.0.0, pako@~1.0.5:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/pako/-/pako-1.0.6.tgz#0101211baa70c4bca4a0f63f2206e97b7dfaf258"
 
@@ -7325,6 +7358,34 @@ trim-right@^1.0.1:
   resolved "https://registry.yarnpkg.com/true-case-path/-/true-case-path-1.0.2.tgz#7ec91130924766c7f573be3020c34f8fdfd00d62"
   dependencies:
     glob "^6.0.4"
+
+ttf2eot@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/ttf2eot/-/ttf2eot-2.0.0.tgz#8e6337a585abd1608a0c84958ab483ce69f6654b"
+  dependencies:
+    argparse "^1.0.6"
+    microbuffer "^1.0.0"
+
+ttf2woff2@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/ttf2woff2/-/ttf2woff2-2.0.3.tgz#5e020afe6e643287f3ad7687abed20fe654eb329"
+  dependencies:
+    bindings "^1.2.1"
+    bufferstreams "^1.1.0"
+    nan "^2.1.0"
+    node-gyp "^3.0.3"
+
+ttf2woff@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/ttf2woff/-/ttf2woff-2.0.1.tgz#871832240024b09db9570904c7c1928b8057c969"
+  dependencies:
+    argparse "^1.0.6"
+    microbuffer "^1.0.0"
+    pako "^1.0.0"
+
+ttfinfo@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/ttfinfo/-/ttfinfo-0.2.0.tgz#df4333d126619d5d3afb53fa45d51a73d02fefea"
 
 tty-browserify@0.0.0:
   version "0.0.0"

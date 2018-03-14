@@ -1,6 +1,16 @@
 @import "socials.scss";
 
-.hero__socials {
+.hero {
+  background: url('./../../images/forest.jpg') no-repeat;
+  background-position: center center;
+  position: relative;
+  background-size: cover;
+
+  height: 80vh;
+}
+
+
+.hero .socials {
    border: 1px solid red;
    background-color: gray;
  }

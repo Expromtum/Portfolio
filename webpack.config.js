@@ -6,12 +6,14 @@ const webpack = require('webpack');
 //Настройки webpack
 const pug = require('./webpack/pug');
 const devserver = require('./webpack/devserver');
-const sass = require('./webpack/sass');
-const css = require('./webpack/css');
+// const sass = require('./webpack/sass');
+// const css = require('./webpack/css');
 const extractCSS = require('./webpack/css.extract');
-const uglifyJS = require('./webpack/js.uglify');
+// const uglifyJS = require('./webpack/js.uglify');
 const images = require('./webpack/images');
 const sprite = require('./webpack/svg.sprite');
+const babelJS = require('./webpack/js.babel');
+const fonts = require('./webpack/fonts');
 
 const PATHS = {
     source: path.join(__dirname, 'src'),
@@ -34,6 +36,7 @@ const common = merge([
 
         // загружаем плагины
         plugins: [
+            //new webpack.NoErrorsPlugin(),//.NoEmitOnErrorsPlugin(),
             // Генерировать html файл с уже подключенным скриптом
             new HtmlWebpackPlugin({
                 //title: 'Portfolio',
@@ -52,15 +55,17 @@ const common = merge([
             }),
         ]
     },
+    babelJS(),
     pug(),
     // sass(),
     // css()
     extractCSS(),
     images(),
-    sprite()
+    sprite(),
+    fonts()
 ]);
 
-//TODO: plumber autoprefixer
+//TODO: plumber
 
 module.exports = function(env) {
     if (!env) {                //startw
