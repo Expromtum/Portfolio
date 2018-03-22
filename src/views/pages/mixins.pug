@@ -1,13 +1,6 @@
 - var svg = "images/sprite.svg"
 
 
-mixin svg-in-sprite(svg_id, svg_class, svg_title)
+mixin svg-on-page(svg_id, svg_class, svg_title)
     svg(class=svg_class, aria-hidden='true', title=svg_title, role="img")
-        use(xlink:href!= svg + "#" + svg_id /*fill="#e25028"*/)
-
-
-mixin icon(linkClassName, iconName, url, color)
-    //- mod = mod || ''
-    //a(href="#{url}" class=`.${linkClassName}` .${linkClassName}--${iconName}`)
-        //svg(class="icon icon-" + iconName role="img")
-            //use(xlink:href="#{svg}##{iconName}")
+        use(xlink:href!= svg + "#" + svg_id)

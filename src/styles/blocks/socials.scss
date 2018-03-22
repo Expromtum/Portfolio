@@ -1,28 +1,30 @@
+@import "./../config/mixins.scss";
+@import "./../config/variables.scss";
+
 .socials__item {
-    display: inline;
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: rem(20);
+
+    &:last-child {
+       margin-right: rem(0);
+    }
 }
 
 .socials__icon {
-    fill: #FFFFFF;
-    width: 20px;
-    height: 20px;
 
-    &--fb {
-        width: 31px;
-        height: 17px;
+    &--vk {
+        width: rem(31px);
+        height: rem(17px);
     }
 
     &--github {
-        width: 26px;
-        height: 22px;
-  }
+        width: rem(26px);
+        height: rem(22px);
+    }
 
-  &--in {
-    width: 24px;
-    height: 22px;
-  }
-
-  &:hover {
-    fill: #6c9c5a;
-  }
+    &--in {
+        width: rem(24px);
+        height: rem(22px);
+    }
 }

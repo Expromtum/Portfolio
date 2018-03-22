@@ -5,7 +5,9 @@ $white: #efeee9;
 @import "config/variables";
 @import "config/media";
 @import "config/mixins";
-@import "layout/adjustment.scss";
+@import "layout/adjustment";
 @import "layout/fonts";
+@import "layout/text_settings";
+@import "layout/controls";
 
 //@import "blocks/**/*.scss";

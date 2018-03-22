@@ -4,18 +4,19 @@ ul.socials
         {
         title: 'vk',
         url: 'vkontakte.com'
-        },{
-        title: 'in',
-        url: 'inst.com'
+
         // },{
         // title:'fb',//'fb',
         // url:'facebook.com'
         },{
         title: 'github',
         url: 'github.com'
+        },{
+        title: 'in',
+        url: 'inst.com'
         }
         ];
 
     each socials_item in socials
-        li(class=`.socials__item .socials__item--${socials_item.title}`)
-            +svg-in-sprite(socials_item.title, "socials__icon socials__icon--" + socials_item.title)
+        li(class=`socials__item socials__item--${socials_item.title}`)
+            +svg-on-page(socials_item.title, "socials__icon svg-icon socials__icon--" + socials_item.title, socials_item.title)

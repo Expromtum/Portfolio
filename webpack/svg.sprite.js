@@ -1,8 +1,13 @@
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
+const glob = require('glob').sync;
 
-module.exports = function () {
+
+module.exports = function (paths) {
     return {
-        // Настройка загрузчиков, они выполняют роль обработчика исходного файла в конечный
+        entry: {
+            sprite: glob('./src/icons/*.svg')
+        },
+
         module: {
             rules: [
                 {
@@ -12,7 +17,8 @@ module.exports = function () {
                             loader: 'svg-sprite-loader',
                             options: {
                                 extract: true,
-                                spriteFilename: 'images/sprite.svg'
+                                spriteFilename: 'images/sprite.svg',
+                                include: paths,
                             }
                         },
                         {

@@ -1,0 +1,23 @@
+@import "./../config/mixins.scss";
+@import "./../config/variables.scss";
+
+.hamburger__icon {
+  width: rem(40px);
+  height: rem(35px);
+}
+
+.hamburger_compact:not(.active){
+  display: none;
+}
+
+.hamburger_compact.active {
+  display: block;
+}
+
+.hamburger_full:not(.active) {
+  display: none;
+}
+
+.hamburger_full.active {
+  display: block;
+}

@@ -1,0 +1,93 @@
+@import "./../config/mixins";
+@import "./../config/variables";
+@import "./../layout/text_settings";
+
+.about {
+  height: rem(900);
+  @extend %clearfix;
+}
+
+.about__col {
+  position: relative;
+  height: 100%;
+  //border: 1px solid blue;
+}
+
+.about__col_left {
+  width: 50%;
+  float: left;
+  background-color: $colorBGGray;
+}
+
+.about__col_right {
+  width: 50%;
+  float: right;
+  background-color: $colorBGWhite;
+}
+
+.about__triangle {
+  display: block;
+  height: rem(105);
+  width: 100%;
+  position: absolute;
+  bottom: 100%;
+  pointer-events: none;
+}
+
+.about__triangle_left {
+  fill: $colorBGGray;
+ // border: 1px solid green;
+}
+
+.about__triangle_right {
+  fill: $colorBGWhite;
+}
+
+.about__content {
+  height: 100%;
+  padding: rem(10);
+  //border: 1px solid red;
+}
+
+.about__photo {
+  margin: 0 auto;
+  display: block;
+  width: 75%;
+ // min-height: 20vmin;
+  max-width: 80%;
+
+  height:auto;
+
+  padding: rem(20);
+}
+
+.about__title {
+  @extend %h1-font;
+  color: $colorGrayFont;
+  //margin-top: rem(5);
+
+}
+
+.about__me-title {
+  @extend %section-title-font;
+  color: $colorGrayFont;
+  margin: rem(10);
+}
+
+.about__skills-title {
+  @extend %section-title-font;
+  color: $colorGrayFont;
+  width: 55%;
+
+}
+
+.about__text {
+  @extend %section-text-font;
+  color: $colorGrayFont;
+  width: 77%;
+  display: block;
+  margin: 0 auto;
+
+  padding: rem(5) 0;
+}
+

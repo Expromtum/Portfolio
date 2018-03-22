@@ -1,16 +1,46 @@
+@import "./../config/mixins.scss";
 @import "socials.scss";
+@import "arrow.scss";
+@import "hamburger.scss";
 
 .hero {
+  //@include background_image('./../../images/forest.jpg');
   background: url('./../../images/forest.jpg') no-repeat;
   background-position: center center;
-  position: relative;
   background-size: cover;
+  position: relative;
+  height: rem(600);
+}
 
-  height: 80vh;
+.hero__header {
+  margin-top: rem(30);
+  width: 100%;
+  @extend %clearfix;
+}
+
+.hero__header .socials {
+  float: left;
+}
+
+.hero__header .hamburger {
+  float: right;
+}
+
+.hero .user {
+  margin: 5% auto;
+  //margin-top: 13vh;
+  //border: 1px solid red;
+}
+
+.hero__arrow {
+  width: 100%;
+  position: absolute;
+  bottom: rem(70);
+}
+
+.hero__arrow-img {
+  margin: 0 auto;
+  display: block;
 }
 
 
-.hero .socials {
-   border: 1px solid red;
-   background-color: gray;
- }

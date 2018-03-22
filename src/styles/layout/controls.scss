@@ -1,0 +1,25 @@
+@import "./../config/mixins.scss";
+@import "./../config/variables.scss";
+
+.svg-icon {
+  fill: $colorWhite;
+  cursor: pointer;
+
+  &:hover {
+    fill: $colorGreen;
+  }
+}
+
+.underline::after {
+  display: block;
+  content: " ";
+  margin: 0 auto;
+  font-size: 0px;
+
+  width: rem(89);
+  height: rem(3);
+  margin-top: rem(20);
+
+  background: url("./../icons/underline.svg")  no-repeat center;
+}
+

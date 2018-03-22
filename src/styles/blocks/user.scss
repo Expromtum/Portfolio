@@ -1,0 +1,32 @@
+@import "./../layout/adjustment";
+@import "./../layout/text_settings";
+@import "./../config/variables";
+
+.user {
+  width: rem(400);
+  max-width: 60vh;
+}
+
+.user__photo {
+  margin: 0 auto;
+  display: block;
+  border-radius: 50%;
+  width: rem(140);
+//  max-width: 90%;
+  border: 1px solid $colorGray;
+}
+
+.user__name {
+  @extend %section-title-font;
+  color: $colorWhite;
+  text-align: center;
+  margin-top: rem(20);
+  width: 100%;
+}
+
+.user__site {
+  @extend %section-text-font;
+  color: $colorWhite;
+  text-align: center;
+  margin-top: rem(10);
+}

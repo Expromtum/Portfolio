@@ -1,5 +1,9 @@
+@import "./../config/mixins.scss";
+@import "./../config/variables.scss";
+
 html {
-  font-size: 16px;
+  font-size: $baseFontSize;
+  line-height: 1.4;
 
   //@include laptop {
   //  font-size: 14px;
@@ -20,11 +24,10 @@ html {
 
 body,
 html {
-  height: 100%;
+  //height: 100%;
   padding: 0;
-  //min-width: $min-width;
-  //font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
-  //background-color: $color-bg-side;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  background-color: $colorBG;
   position: relative;
 }
 
@@ -37,19 +40,20 @@ html {
 .wrapper {
   position: relative;
   width: 100%;
-  min-height: 100vh;
-  max-height: 100vh;
+ /* min-height: 100vh;
+  max-height: 100vh;*/
   height: 100%;
   overflow: hidden;
 }
 
+/*
 .maincontent {
   height: 100%;
 }
 
 .site-section {
   height: 100%;
- // background-color: $color-bg-side;
+  background-color: $colorBG;
   margin: 0 auto;
   overflow: hidden;
 
@@ -59,16 +63,20 @@ html {
     justify-content: center;
   }
 }
+*/
 
 .container {
+  /* width: $section-width;*/
   width: 95%;
-  max-width: rem(1500px);
-  height: 100vh;
+  height: 100%;
+  max-width: 1800px;
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  border: 1px solid red;
+  position: relative;
+  //display: flex;
+  //justify-content: center;
+  //align-items: center;
+  //flex-direction: column;
 }
 
 h1,
