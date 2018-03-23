@@ -19,4 +19,4 @@ ul.socials
 
     each socials_item in socials
         li(class=`socials__item socials__item--${socials_item.title}`)
-            +svg-on-page(socials_item.title, "socials__icon svg-icon socials__icon--" + socials_item.title, socials_item.title)
+            +svg-on-page(socials_item.title, "hover-svg-icon socials__icon socials__icon--" + socials_item.title, socials_item.title)

@@ -3,7 +3,7 @@
 @import "./../layout/text_settings";
 
 .about {
-  height: rem(900);
+  height: 100vh;
   @extend %clearfix;
 }
 
@@ -32,6 +32,8 @@
   position: absolute;
   bottom: 100%;
   pointer-events: none;
+  fill-opacity: 1;
+  opacity: 1;
 }
 
 .about__triangle_left {
@@ -53,10 +55,10 @@
   margin: 0 auto;
   display: block;
   width: 75%;
- // min-height: 20vmin;
-  max-width: 80%;
+  //max-height: 70%;
+  //max-width: 80%;
 
-  height:auto;
+  height: auto;
 
   padding: rem(20);
 }
