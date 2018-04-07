@@ -1,7 +1,6 @@
 var map;
 
-
-import './../images/map-marker.png';
+import 'src/images/map-marker.png';
 
 window.initMap = function () {
 

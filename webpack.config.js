@@ -17,8 +17,12 @@ const fonts = require('./webpack/fonts');
 
 const PATHS = {
     source: path.join(__dirname, 'src'),
-    build: path.join(__dirname, 'build')
+    build: path.join(__dirname, 'build'),
+    node_modules: path.join(__dirname, 'node_modules')
 };
+
+//locals.basedir = PATHS.source;
+//app.locals.basedir = PATHS.source;
 
 const common = merge([
     {
@@ -27,6 +31,15 @@ const common = merge([
             //'google-map': PATHS.source + '/js/google-map.js',
             'index': PATHS.source + '/views/pages/index/index.js',
             'blog': PATHS.source + '/views/pages/blog/blog.js'
+        },
+
+        resolve: {
+            // extensions: ['.js', '.pug', '.scss'],
+            // modules: [PATHS.source , 'node_modules'],
+
+            alias: {
+                src: PATHS.source
+            }
         },
 
         // то, что получим на выходе

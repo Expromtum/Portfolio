@@ -1,13 +1,11 @@
 //scss
-import '../../../styles/main.scss';
-import './index.scss';
-import '../../../styles/blocks/hero.scss';
-import '../../../styles/blocks/user.scss';
-import '../../../styles/blocks/about.scss';
-import '../../../styles/blocks/contacts.scss';
+import 'src/styles/main.scss';
+import 'src/views/pages/index/index.scss';
+import 'src/styles/blocks/hero.scss';
+import 'src/styles/blocks/user.scss';
+import 'src/styles/blocks/about.scss';
+import 'src/styles/blocks/contacts.scss';
 
 //js
-import './../../../js/hero.js';
-import './../../../js/google-map.js';
-
-//console.log('in index.js');
+import 'src/js/hero.js';
+import 'src/js/google-map.js';

@@ -1,7 +1,18 @@
 extends ../main
+include ../../mixins/user
 
 block title
-    title Блог
+	title Блог
 block content
-    h1 page БЛОГ
-    //img(src=require("./hero_bg.jpg") width="500")
+	//Секция Блог
+	section.section.hero
+		.hero__bg
+			img(src=require("src/images/forest.jpg") alt="")
+		.container
+			.transparent-title.blog__transparent-title
+				+svg-on-page('blog_header', 'transparent-title__img')
+			//Фото разработчика
+			.hero__user
+				+user('', 'Блог', 'Мои статьи')
+	//Footer
+	include ../../parts/footer

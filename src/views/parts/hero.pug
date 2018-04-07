@@ -1,6 +1,8 @@
+include ../mixins/user
+
 section.section.hero
 	.hero__bg
-		img(src=require("./../../../images/forest.jpg") alt="")
+		img(src=require("src/images/forest.jpg") alt="")
 	.container
 		//Социальные кнопки и кнопка меню
 		header.hero__header
@@ -18,7 +20,7 @@ section.section.hero
 
 		//Фото разработчика
 		.hero__user
-			include ../parts/user
+			+user('', 'Марина Сокуренко', 'Личный сайт разработчика')
 
 		.hero__arrow
 			+svg-on-page('portf_arrow_down','hover-svg-icon arrow hero__arrow-img')

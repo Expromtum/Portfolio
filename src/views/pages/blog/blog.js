@@ -1,5 +1,8 @@
 //scss
-import '../../../styles/main.scss';
-import './blog.scss';
+import 'src/styles/main.scss';
+import 'src/views/pages/blog/blog.scss';
+import 'src/styles/blocks/hero.scss';
+import 'src/styles/blocks/user.scss';
 
-console.log('in blog.js')
+//js+
+import 'src/js/hero.js';

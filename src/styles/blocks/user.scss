@@ -1,6 +1,6 @@
-@import "./../layout/adjustment";
-@import "./../layout/text_settings";
-@import "./../config/variables";
+@import "src/styles/layout/adjustment";
+@import "src/styles/layout/text_settings";
+@import "src/styles/config/variables";
 
 .user {
   width: rem(400);
@@ -16,7 +16,7 @@
   border: 1px solid $colorGray;
 }
 
-.user__name {
+.user__title {
   @extend %section-title-font;
   color: $colorWhite;
   text-align: center;

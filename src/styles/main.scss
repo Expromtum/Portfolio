@@ -2,12 +2,12 @@
 $white: #efeee9;
 
 @import "~normalize.css";
-@import "config/variables";
-@import "config/media";
-@import "config/mixins";
-@import "layout/adjustment";
-@import "layout/fonts";
-@import "layout/text_settings";
-@import "layout/controls";
+@import "src/styles/config/variables";
+@import "src/styles/config/media";
+@import "src/styles/config/mixins";
+@import "src/styles/layout/adjustment";
+@import "src/styles/layout/fonts";
+@import "src/styles/layout/text_settings";
+@import "src/styles/layout/controls";
 
 //@import "blocks/**/*.scss";

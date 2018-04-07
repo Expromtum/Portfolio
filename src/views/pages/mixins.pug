@@ -1,6 +1,5 @@
 - var svg = "images/sprite.svg"
 
-
-mixin svg-on-page(svg_id, svg_class, svg_title)
-    svg(class=svg_class, aria-hidden='true', title=svg_title, role="img")
-        use(xlink:href!= svg + "#" + svg_id)
+mixin svg-on-page(svgID, svgClass, svgTitle)
+	svg(class=svgClass, aria-hidden='true', title=svgTitle, role="img")
+		use(xlink:href!= svg + "#" + svgID)

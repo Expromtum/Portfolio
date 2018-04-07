@@ -1,0 +1,5 @@
+mixin user(userClass, userTitle, userNote)
+	.user(class=userClass)
+		img(class='user__photo' src=require('src/images/user.jpg') alt='')
+		.user__title=userTitle
+		.user__site=userNote
