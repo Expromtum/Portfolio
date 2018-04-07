@@ -17,7 +17,7 @@ npm manifest:
   {
     "name": "Portfolio",
     "version": "1.0.0",
-    "main": "index.js",
+    "main": "page_about.js",
     "repository": "git@github.com:Expromtum/Portfolio.git",
     "author": "Marina Sokurenko <stagger@mail.ru>",
     "license": "MIT",

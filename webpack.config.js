@@ -30,7 +30,8 @@ const common = merge([
         entry: {
             //'google-map': PATHS.source + '/js/google-map.js',
             'index': PATHS.source + '/views/pages/index/index.js',
-            'blog': PATHS.source + '/views/pages/blog/blog.js'
+            'about': PATHS.source + '/views/pages/about/page_about.js',
+            'blog': PATHS.source + '/views/pages/blog/page_blog.js'
         },
 
         resolve: {
@@ -63,10 +64,16 @@ const common = merge([
                 template: PATHS.source + '/views/pages/index/index.pug'
             }),
             new HtmlWebpackPlugin({
+                //title: 'Portfolio',
+                filename: 'about.html',
+                chunks: ['about', 'common'],
+                template: PATHS.source + '/views/pages/about/page_about.pug'
+            }),
+            new HtmlWebpackPlugin({
                 //title: 'Portfolio-blog',
                 filename: 'blog.html',
                 chunks: ['blog', 'common'],
-                template: PATHS.source + '/views/pages/blog/blog.pug'
+                template: PATHS.source + '/views/pages/blog/page_blog.pug'
             }),
             new webpack.optimize.CommonsChunkPlugin({
                 name: 'common' //Вынесем общий код в отдельный модуль с именем common
