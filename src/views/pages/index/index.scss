@@ -5,6 +5,7 @@
 @import "src/styles/layout/text_settings";
 
 $footerHeight: 50px;
+$maxFooterHeight: 10vh;
 
 .wrapper {
   //max-width: 1500px;
@@ -13,7 +14,7 @@ $footerHeight: 50px;
 .welcome {
   position: relative;
   //height: calc(100vh - #{$footerHeight});
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   overflow: hidden;
 }
@@ -25,11 +26,15 @@ $footerHeight: 50px;
   width: 100%;
   height: $footerHeight;
   text-align: center;
+  max-height: $maxFooterHeight;
 }
 
 .welcome__copyright {
   @extend %section-text-font;
   color: $colorWhite;
+  min-height: 100%;
+  //max-height: 100%;
+  vertical-align: middle;
 }
 
 
@@ -70,6 +75,7 @@ $footerHeight: 50px;
   left: 0;
   width: 100%;
   height: calc(100% - #{$footerHeight});
+  min-height: calc(100% - #{$maxFooterHeight});
   background-image: linear-gradient(to bottom, rgba(0,0,0, 0.5) 0%, transparent 20%, transparent 80%, rgba(0,0,0, 0.3) 100%);
   background-size: cover;
   background-position: center;
@@ -77,8 +83,13 @@ $footerHeight: 50px;
 
 .welcome__user {
   position: absolute;
-  width: rem(380px);
-  max-width: 65vh;
+  min-width: rem(380px);
+  //max-width: 50vw;
+  //max-height: 50vh;
+  padding-top: rem(40px);
+  display: block;
+  overflow: hidden;
+  z-index: 50;
 
   @include centered('both');
 
@@ -89,11 +100,13 @@ $footerHeight: 50px;
 
   & .user {
     margin: 0 auto;
+    max-height: rem(500px);
   }
 
   & .socials {
     display: inline-block;
     margin-top: rem(20px);
+    margin-bottom: rem(40px);
   }
 
   & .socials__icon {
@@ -105,14 +118,10 @@ $footerHeight: 50px;
   }
 
   & .user__text {
-    color: $colorGrayFontLight;;
+    color: $colorGrayFontLight;
   }
 
   & .btn-group {
     width: 100%;
   }
-}
-
-.welcome__user-data {
-   padding: rem(40px);
 }

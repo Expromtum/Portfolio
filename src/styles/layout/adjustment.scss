@@ -29,6 +29,8 @@ html {
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
   background-color: $colorBG;
   position: relative;
+
+  overflow-y: scroll;
 }
 
 *,
