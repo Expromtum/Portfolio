@@ -85,7 +85,7 @@ const common = merge([
     // sass(),
     // css()
     extractCSS(),
-    images(),
+    images(PATHS),
     sprite(),
     fonts()
 ]);

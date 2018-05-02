@@ -5,7 +5,7 @@ const glob = require('glob').sync;
 module.exports = function (paths) {
     return {
         entry: {
-            sprite: glob('./src/icons/*.svg')
+            sprite: glob('./src/icons/sprite/*.svg')
         },
 
         module: {

@@ -3,8 +3,9 @@
 @import "src/styles/config/variables";
 
 .user {
-  width: rem(400);
-  max-width: 60vh;
+  //width: rem(400);
+  max-width: 60vmin;
+  //max-height: 50vh;
 }
 
 .user__photo {
@@ -24,7 +25,7 @@
   width: 100%;
 }
 
-.user__site {
+.user__text {
   @extend %section-text-font;
   color: $colorWhite;
   text-align: center;

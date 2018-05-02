@@ -1,0 +1,18 @@
+@import "src/styles/config/mixins";
+@import "src/styles/config/variables";
+@import "src/styles/layout/text_settings";
+
+.btn {
+  background-color: $colorGreen; /* Green background */
+  border: 2px solid  $colorGrayFontLight;
+  color: $colorWhite; /* White text */
+  padding: rem(10px) rem(24px); /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+  @extend %section-text-font;
+}
+
+/* Add a background color on hover */
+.btn:hover {
+  background-color: $colorGreenButtonHover;
+}

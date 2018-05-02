@@ -1,12 +1,13 @@
 @import "src/styles/config/mixins.scss";
 @import "src/styles/config/variables.scss";
+//@import 'src/icons/underline.svg';
 
 .hover-svg-icon {
   fill: $colorWhite;
   cursor: pointer;
 
   &:hover {
-    fill: $colorGreen;
+    fill: $colorGreenHover;
   }
 }
 
@@ -20,6 +21,14 @@
   height: rem(3);
   margin-top: rem(20);
 
-  background: url("./../icons/underline.svg")  no-repeat center;
+  background: url('/images/underline.svg') no-repeat center;
 }
+
+//.mask {
+//  background-color: #122620;
+//  opacity: 0.6;
+//}
+//
+
+
 

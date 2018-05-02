@@ -1,13 +1,36 @@
 extends ../main
+include ../../mixins/user
+include ../../mixins/btn_group
 
 block title
 	title Портфолио
 block content
 	//Секция Приветствие
-	include ../../parts/hero
-	//Секция Обо мне
-	//include ../../parts/about
-	//Секция Контакты
-	//include ../../parts/contacts
-	//Footer
-	//include ../../parts/footer
+	section.section.welcome
+		.welcome__bg
+			img(src=require("src/images/forest.jpg") alt="")
+		.welcome__img_mask
+		//Фото разработчика
+		.welcome__user
+			.welcome__user-data
+				+user('', 'Марина Сокуренко', 'Личный сайт разработчика')
+				include ./../../parts/socials
+			-
+				var welcome_btn_group = [
+				{
+					title: 'Мои работы',
+					class_name: 'btn-works',
+					url: '#'
+				},{
+					title: 'Обо мне',
+					class_name: 'btn-about',
+					url: '#'
+				},{
+					title: 'Блог',
+					class_name: 'btn-blog',
+					url: '#'
+				}
+				];
+			+btn_group('welcome_button-group', welcome_btn_group)
+		.welcome__footer
+			.welcome__copyright © Марина Сокуренко | 2018

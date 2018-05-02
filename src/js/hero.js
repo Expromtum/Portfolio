@@ -1,5 +1,3 @@
-console.log('hero.js');
-
 var parallax = (function () {
     var bg = $('.hero__bg');                       // Задний фон
     var portfolio = $('.hero__transparent-title'); // Полупрозрачная надпись

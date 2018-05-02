@@ -2,10 +2,10 @@
 @import "src/styles/blocks/socials";
 @import "src/styles/blocks/arrow";
 @import "src/styles/blocks/hamburger";
-@import "src/styles/blocks/transparent-title";
+@import "transparent-title";
 
 .hero {
-  height: rem(600);
+  height: 80vh;
   position: relative;
   overflow: hidden;
 }

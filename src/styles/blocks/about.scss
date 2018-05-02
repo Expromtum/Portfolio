@@ -3,7 +3,7 @@
 @import "src/styles/layout/text_settings";
 
 .about {
-  height: 100vh;
+  height: 950px;
   @extend %clearfix;
 }
 
@@ -54,9 +54,9 @@
 .about__photo {
   margin: 0 auto;
   display: block;
-  width: 75%;
+  width: rem(500px);
   //max-height: 70%;
-  //max-width: 80%;
+  max-width: 80%;
 
   height: auto;
 
@@ -65,27 +65,27 @@
 
 .about__title {
   @extend %h1-font;
-  color: $colorGrayFont;
+  color: $colorGrayFontDark;
   //margin-top: rem(5);
 
 }
 
 .about__me-title {
   @extend %section-title-font;
-  color: $colorGrayFont;
+  color: $colorGrayFontDark;
   margin: rem(10);
 }
 
 .about__skills-title {
   @extend %section-title-font;
-  color: $colorGrayFont;
+  color: $colorGrayFontDark;
   width: 55%;
 
 }
 
 .about__text {
   @extend %section-text-font;
-  color: $colorGrayFont;
+  color: $colorGrayFontDark;
   width: 77%;
   display: block;
   margin: 0 auto;

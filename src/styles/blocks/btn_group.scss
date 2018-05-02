@@ -1,0 +1,18 @@
+@import 'src/styles/blocks/btn';
+@import 'src/styles/config/mixins';
+
+.btn-group {
+  display: flex;
+}
+
+.btn-group .btn{
+  flex-basis: auto;
+  flex-grow: 1;
+  border-left: none;
+  border-top: none;
+  border-bottom: none;
+}
+
+.btn-group .btn:last-child {
+  border-right: none; /* Prevent double borders */
+}
