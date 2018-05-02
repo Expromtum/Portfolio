@@ -5,7 +5,8 @@
 @import "transparent-title";
 
 .hero {
-  height: 80vh;
+  height: 600px;
+  min-height: 80vh;
   position: relative;
   overflow: hidden;
 }
