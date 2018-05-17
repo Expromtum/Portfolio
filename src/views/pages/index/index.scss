@@ -78,6 +78,13 @@ $maxFooterHeight: 10vh;
   background-position: center;
 }
 
+.welcome_autorization_btn {
+  position: absolute;
+  z-index: 50;
+  right: 3vw;
+  top: 3vh;
+}
+
 .welcome__user {
   position: absolute;
   min-width: rem(380px);

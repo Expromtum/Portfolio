@@ -1,6 +1,7 @@
 extends ../main
 include ../../mixins/user
 include ../../mixins/btn_group
+include ../../mixins/btn
 
 block title
 	title Портфолио
@@ -10,6 +11,7 @@ block content
 		.welcome__bg
 			img(src=require("src/images/forest.jpg") alt="")
 		.welcome__img_mask
+		+autorization_btn('Авторизоваться', 'welcome_autorization_btn')
 		//Фото разработчика
 		.welcome__user
 			+user('', 'Марина Сокуренко', 'Личный сайт разработчика')

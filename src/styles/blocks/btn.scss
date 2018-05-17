@@ -2,13 +2,13 @@
 @import "src/styles/config/variables";
 @import "src/styles/layout/text_settings";
 
+//Обычная кнопка
 .btn {
   background-color: $colorGreen; /* Green background */
-  border: 2px solid  $colorGrayFontLight;
+  border: 2px solid $colorGrayFontLight;
   color: $colorWhite; /* White text */
   padding: rem(10px) rem(24px); /* Some padding */
   cursor: pointer; /* Pointer/hand icon */
-  float: left; /* Float the buttons side by side */
   @extend %section-text-font;
 }
 
@@ -16,3 +16,20 @@
 .btn:hover {
   background-color: $colorGreenButtonHover;
 }
+
+//Кнопка авторизации
+.autorization_btn {
+  border: 1px solid $colorWhite;
+  background-color: transparent;
+  border-radius: 20px;
+  color: $colorWhite;
+  padding: rem(2px) rem(24px);
+  @extend %section-text-font;
+}
+
+.autorization_btn:hover {
+  background-color: $colorGreenButtonHover;
+  border-color: $colorGreenButtonHover;
+}
+
+

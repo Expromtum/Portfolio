@@ -2,4 +2,7 @@ mixin btn(title,class_name)
 	button.btn(class=class_name, type="button")=title
 
 mixin submit(title)
-	input.btn(class=class_name, type='submit',value=title)
+	input.btn(class='btn_submit', type='submit',value=title)
+
+mixin autorization_btn(title,class_name)
+	button.autorization_btn(class=class_name, type="button")=title
