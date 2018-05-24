@@ -9,10 +9,10 @@
   color: $colorWhite; /* White text */
   padding: rem(10px) rem(24px); /* Some padding */
   cursor: pointer; /* Pointer/hand icon */
+  text-align: center;
   @extend %section-text-font;
 }
 
-/* Add a background color on hover */
 .btn:hover {
   background-color: $colorGreenButtonHover;
 }
@@ -24,12 +24,11 @@
   border-radius: 20px;
   color: $colorWhite;
   padding: rem(2px) rem(24px);
+  text-align: center;
   @extend %section-text-font;
 }
 
 .autorization_btn:hover {
   background-color: $colorGreenButtonHover;
-  border-color: $colorGreenButtonHover;
+  border-color: $colorGreenButtonHoverBorder;
 }
-
-
