@@ -39,40 +39,25 @@
 }
 
 .input__row {
-  margin-bottom: rem(20);
   width: 100%;
 }
 
-$iconWidth: 10%;
-$inputPadding: 5%;
-
 .login .input__login {
-  background-image:
-          url('/images/login.svg'),
-          linear-gradient(to right, $colorBGGray $iconWidth, $colorWhite $iconWidth);
-  background-repeat: no-repeat;
-  background-position: rem(10), 0;
-  background-size: auto 40%, 105%;
-  padding-left: $iconWidth + $inputPadding;
-  padding-right: $inputPadding;
-  width: 100% - $iconWidth - ($inputPadding * 2);
+  @include inputTextWithIcon('/images/login.svg');
+  margin-bottom: rem(20);
 }
 
 .login .input__password {
-  background-image:
-          url('/images/password.svg'),
-          linear-gradient(to right, $colorBGGray $iconWidth, $colorWhite $iconWidth);
-  background-repeat: no-repeat;
-  background-position: rem(10), 0;
-  background-size: auto 40%, 105%;
-  padding-left: $iconWidth + $inputPadding;
-  padding-right: $inputPadding;
-  width: 100% - $iconWidth - ($inputPadding * 2);
+  @include inputTextWithIcon('/images/password.svg');
+  margin-bottom: rem(20);
 }
-
 
 .login .input__robots-title {
   @extend %section-text-font;
   color: $colorWhite;
   font-weight: bold;
+}
+
+.login .input__robots-radio .radio-button {
+  margin: 0 10%;
 }

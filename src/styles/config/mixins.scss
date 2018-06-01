@@ -1,3 +1,5 @@
+@import 'src/styles/config/variables';
+
 @mixin centered($axis: 'both') {
   position: absolute;
 
@@ -49,6 +51,22 @@ $baseFontSize: 16;
   }
 
   @return $pixels / $context * 1rem;
+}
+
+
+$iconWidth: 10%;
+$inputPadding: 5%;
+
+@mixin inputTextWithIcon($url) {
+  background-image:
+          url($url),
+          linear-gradient(to right, $colorBGGray $iconWidth, $colorWhite $iconWidth);
+  background-repeat: no-repeat;
+  background-position: rem(10), 0;
+  background-size: auto 40%, 105%;
+  padding-left: $iconWidth + $inputPadding;
+  padding-right: $inputPadding;
+  width: 100% - $iconWidth - ($inputPadding * 2);
 }
 
 //@mixin background_image($url) {
