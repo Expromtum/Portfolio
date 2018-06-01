@@ -15,7 +15,7 @@
   display: block;
   content: " ";
   margin: 0 auto;
-  font-size: 0px;
+  font-size: 0;
 
   width: rem(89);
   height: rem(3);
@@ -46,12 +46,95 @@ textarea {
   }
 }
 
+$button-height: rem(20px);
+$point-pos: rem(6px);
 
-//.mask {
-//  background-color: #122620;
-//  opacity: 0.6;
-//}
-//
+.radio-button {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+
+  & input[type="radio"] {
+    display: none;
+  }
+
+  & .radio-custom {
+    width: $button-height;
+    height: $button-height;
+    background: $colorWhite;
+    border-radius: 3px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: rem(10px);
+  }
+
+  & input[type="radio"]:checked + .radio-custom::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: $point-pos;
+    right: $point-pos;
+    bottom: $point-pos;
+    left: $point-pos;
+    background: $colorGreen;
+    border-radius: 50%;
+  }
+
+  & .radio-custom,
+  & input[type="radio"]:checked + .radio-custom::before {
+    border-radius: 50%;
+  }
+
+  & span {
+    vertical-align: middle;
+    @extend %section-text-font;
+    color: $colorWhite;
+  }
+}
+
+.checkbox-button {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+
+  & input[type="checkbox"] {
+    display: none;
+  }
+
+  & .checkbox-custom {
+    width: $button-height;
+    height: $button-height;
+    background: $colorGreen;
+    border-radius: 2px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: rem(10px);
+  }
+
+  & input[type="checkbox"]:checked + .checkbox-custom::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('/images/check.svg') no-repeat center;
+    background-size: 80%;
+    background-position: center center;
+  }
+
+  & span {
+    vertical-align: middle;
+    @extend %section-text-font;
+    color: $colorWhite;
+  }
+}
+
+
+
 
 
 

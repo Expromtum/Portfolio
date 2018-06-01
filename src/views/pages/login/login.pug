@@ -14,14 +14,28 @@ block content
 		form.login__form
 			.login__title.underline АВТОРИЗУЙТЕСЬ
 			.input__col
-				input(id='input__login' type="text" placeholder='Логин' required autofocus autocomplete='on').input__login.input__row
-				input(id='input__pasword' type="password" placeholder='Пароль' maxlength='20' autocomplete='current-password' required).input__pasword.input__row
-				.input__human.input__row
-				.input__robots.input__row
-					.input__robots-title
-					.input__robots-radio
-						.input__robots-yes Да
-						.input__robots-no Не уверен
+				.input__row
+					input(type='text' name='login'  placeholder='Логин' required autofocus autocomplete='on').input__login
+				.input__row
+					input(type='password' name='password' placeholder='Пароль' maxlength='20' autocomplete='current-password' required).input__password
+				.input__row
+					.input__human
+						label.checkbox-button
+							input(type='checkbox' name='human' value='0')
+							span.checkbox-custom
+							span Я человек
+				.input__row
+					.input__robots
+						.input__robots-title Вы точно не робот?
+						.input__robots-radio
+							label.radio-button
+								input(type='radio' name='robot-option' value='yes')
+								span.radio-custom
+								span ДА
+							label.radio-button
+								input(type='radio' name='robot-option' value='no')
+								span.radio-custom
+								span Не уверен
 			-
 				var loginBtnGroup = [
 				{
