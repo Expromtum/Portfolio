@@ -30,8 +30,9 @@ const common = merge([
         entry: {
             //'google-map': PATHS.source + '/js/google-map.js',
             'index': PATHS.source + '/views/pages/index/index.js',
-            'about': PATHS.source + '/views/pages/about/page_about.js',
-            'blog': PATHS.source + '/views/pages/blog/page_blog.js'
+            'about': PATHS.source + '/views/pages/about/about.js',
+            'blog' : PATHS.source + '/views/pages/blog/blog.js',
+            'login': PATHS.source + '/views/pages/login/login.js'
         },
 
         resolve: {
@@ -58,22 +59,24 @@ const common = merge([
             //new webpack.NoErrorsPlugin(),//.NoEmitOnErrorsPlugin(),
             // Генерировать html файл с уже подключенным скриптом
             new HtmlWebpackPlugin({
-                //title: 'Portfolio',
                 filename: 'index.html',
                 chunks: ['index', 'common'],
                 template: PATHS.source + '/views/pages/index/index.pug'
             }),
             new HtmlWebpackPlugin({
-                //title: 'Portfolio',
                 filename: 'about.html',
                 chunks: ['about', 'common'],
-                template: PATHS.source + '/views/pages/about/page_about.pug'
+                template: PATHS.source + '/views/pages/about/about.pug'
             }),
             new HtmlWebpackPlugin({
-                //title: 'Portfolio-blog',
                 filename: 'blog.html',
                 chunks: ['blog', 'common'],
-                template: PATHS.source + '/views/pages/blog/page_blog.pug'
+                template: PATHS.source + '/views/pages/blog/blog.pug'
+            }),
+            new HtmlWebpackPlugin({
+                filename: 'login.html',
+                chunks: ['login', 'common'],
+                template: PATHS.source + '/views/pages/login/login.pug'
             }),
             new webpack.optimize.CommonsChunkPlugin({
                 name: 'common' //Вынесем общий код в отдельный модуль с именем common

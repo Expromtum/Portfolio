@@ -1,6 +1,8 @@
-@import "src/styles/config/mixins";
-@import "src/styles/config/variables";
-@import "src/styles/layout/text_settings";
+//@import 'src/styles/main';
+
+@import 'src/styles/config/mixins';
+@import 'src/styles/config/variables';
+@import 'src/styles/layout/text_settings';
 
 .about {
   height: 950px;
@@ -38,7 +40,7 @@
 
 .about__triangle_left {
   fill: $colorBGGray;
- // border: 1px solid green;
+  // border: 1px solid green;
 }
 
 .about__triangle_right {

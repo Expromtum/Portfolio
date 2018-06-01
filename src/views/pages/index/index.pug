@@ -7,10 +7,10 @@ block title
 	title Портфолио
 block content
 	//Секция Приветствие
-	section.section.welcome
-		.welcome__bg
-			img(src=require("src/images/forest.jpg") alt="")
-		.welcome__img_mask
+	main.section.welcome
+		.main-bg.welcome__main-bg
+			img(src=require('src/images/forest.jpg') alt="")
+		.main-img-mask.welcome__main-img-mask
 		+autorization_btn('Авторизоваться', 'welcome_autorization_btn')
 		//Фото разработчика
 		.welcome__user
@@ -19,19 +19,19 @@ block content
 			-
 				var welcome_btn_group = [
 				{
-					title: 'Мои работы',
-					class_name: 'btn-works',
-					url: '#'
+				title: 'Мои работы',
+				class_name: 'btn-works',
+				url: '#'
 				},{
-					title: 'Обо мне',
-					class_name: 'btn-about',
-					url: '#'
+				title: 'Обо мне',
+				class_name: 'btn-about',
+				url: '#'
 				},{
-					title: 'Блог',
-					class_name: 'btn-blog',
-					url: '#'
+				title: 'Блог',
+				class_name: 'btn-blog',
+				url: '#'
 				}
 				];
 			+btn_group('welcome_button-group', welcome_btn_group)
-		.welcome__footer
-			.welcome__copyright © Марина Сокуренко | 2018
+		footer.main-footer.welcome__main-footer
+			.main-footer__copyright.welcome__copyright © Марина Сокуренко | 2018

@@ -21,8 +21,31 @@
   height: rem(3);
   margin-top: rem(20);
 
-  background: url('/images/underline.svg') no-repeat center;
+  mask: url('/images/underline.svg') no-repeat center;
+  background-color: $colorGrayFontDark;
 }
+
+input[type="text"],
+input[type="number"],
+input[type="password"],
+textarea {
+  border-radius: 20px;
+  border: 1px solid transparent;
+  outline: 0;
+  padding: rem(10px);
+  overflow: hidden;
+  background-color: $colorWhite;
+
+  &:focus {
+    border-color: #FFFFFF;
+  }
+
+  &::placeholder {
+    color: $colorGrayFontLight;
+    text-align: left;
+  }
+}
+
 
 //.mask {
 //  background-color: #122620;
