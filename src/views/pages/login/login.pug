@@ -11,11 +11,11 @@ block content
 			img(src=require("src/images/forest.jpg") alt="")
 		.main-img-mask.login__main-img-mask
 		//Вход
-		.login__input
-			.input__title.underline АВТОРИЗУЙТЕСЬ
+		form.login__form
+			.login__title.underline АВТОРИЗУЙТЕСЬ
 			.input__col
-				input(name='input__login' type="text" placeholder='Логин' required autofocus).input__login.input__row
-				input(name='input__pasword' type="password" placeholder='Пароль' required).input__pasword.input__row
+				input(id='input__login' type="text" placeholder='Логин' required autofocus autocomplete='on').input__login.input__row
+				input(id='input__pasword' type="password" placeholder='Пароль' maxlength='20' autocomplete='current-password' required).input__pasword.input__row
 				.input__human.input__row
 				.input__robots.input__row
 					.input__robots-title
@@ -23,7 +23,7 @@ block content
 						.input__robots-yes Да
 						.input__robots-no Не уверен
 			-
-				var login_btn_group = [
+				var loginBtnGroup = [
 				{
 				title: 'На главную',
 				class_name: 'btn-to-main',
@@ -34,6 +34,6 @@ block content
 				url: '#'
 				}
 				];
-			+btn_group('login_button-group', login_btn_group)
+			+btn_group('login__button-group', loginBtnGroup)
 		footer.main-footer.login__main-footer
 			.main-footer__copyright.login__copyright © Марина Сокуренко | 2018

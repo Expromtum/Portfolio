@@ -6,7 +6,7 @@
 @import 'src/styles/layout/controls';
 @import 'src/styles/layout/text_settings';
 
-.login__input {
+.login .login__form {
   position: absolute;
   min-width: rem(380px);
   padding-top: rem(40px);
@@ -26,12 +26,12 @@
   }
 }
 
-.input__title {
+.login__title {
   @extend %section-title-font;
   color: $colorWhite;
 }
 
-.input__title.underline::after {
+.login__title.underline::after {
   background-color: $colorWhite;
 }
 
