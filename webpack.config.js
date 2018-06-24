@@ -95,6 +95,15 @@ const common = merge([
 
 //TODO: plumber
 
+/*
+  "scripts": {
+    "start": "webpack-dev-server --env development",
+    "startw": "webpack --watch",
+    "build": "webpack --env production",
+    "serv": "static build"
+  },
+*/
+
 module.exports = function(env) {
     if (!env) {                //startw
         return merge([

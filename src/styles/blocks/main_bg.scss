@@ -1,8 +1,8 @@
 @import "src/styles/config/variables";
 @import "src/styles/layout/text_settings";
 
-$footerHeight: 50px;
-$maxFooterHeight: 10vh;
+$mainFooterHeight: 50px;
+$maxMainFooterHeight: 10vh;
 
 main {
   position: relative;
@@ -33,8 +33,8 @@ main {
   top: 0;
   left: 0;
   width: 100%;
-  height: calc(100% - #{$footerHeight});
-  min-height: calc(100% - #{$maxFooterHeight});
+  height: calc(100% - #{$mainFooterHeight});
+  min-height: calc(100% - #{$maxMainFooterHeight});
   background-image: linear-gradient(to bottom, rgba(0,0,0, 0.5) 0%, transparent 20%, transparent 80%, rgba(0,0,0, 0.3) 100%);
   background-size: cover;
   background-position: center;
@@ -45,14 +45,14 @@ main {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: $footerHeight;
-  text-align: center;
-  max-height: $maxFooterHeight;
+  height: $mainFooterHeight;
+  max-height: $maxMainFooterHeight;
+
+  @extend %verticalAlignSpan;
 }
 
-
-.main-footer__copyright {
-  @extend %section-text-font;
+.main-footer__text {
+  @extend %section-text-font-regular;
   color: $colorWhite;
   min-height: 100%;
   vertical-align: middle;

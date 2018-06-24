@@ -1,5 +1,49 @@
+include ../mixins/footer
+
 section.section.contacts
 	div(id='map')
-
+	.contacts__block
+		.contacts__title.underline Контакты
+		.contacts__row
+			a(href='skype:expromtum').contacts__link
+				.contacts__row-item.contacts__row-item--icon
+					+svg-on-page('skype', 'contacts__icon contacts__icon--skype', 'Skype')
+				.contacts__row-item.contacts__text expromtum
+		.contacts__row
+			a(href='mailto:expromtum@gmail.com').contacts__link
+				.contacts__row-item.contacts__row-item--icon
+					+svg-on-page('envelope2', 'contacts__icon contacts__icon--mail', 'E:mail')
+				.contacts__row-item.contacts__text expromtum@gmail.com
+		.contacts__row
+			a(href='tel:+79035594425').contacts__link
+				.contacts__row-item.contacts__row-item--icon
+					+svg-on-page('phone2', 'contacts__icon contacts__icon--phone', 'Phone')
+				.contacts__row-item.contacts__text +7 903 559 44 25
+		.contacts__row
+			.contacts__row-item.contacts__row-item--icon
+				+svg-on-page('map_marker', 'contacts__icon contacts__icon--location', 'Location')
+			.contacts__text.contacts__row-item Москва, Прибрежный проезд, д.5
+footer.contacts-footer
+	ul.contacts-footer__list
+		li.contacts-footer__item
+			span.contacts__about-site Этот сайт сделан в рамках самостоятельного обучения
+		li.contacts-footer__item
+			nav.contacts-nav
+				ul.contacts-nav__list
+					li.contacts-nav__item
+						a.contacts-nav__link.contacts-nav__link_works(href='#') Мои работы
+					li.contacts-nav__item
+						a.contacts-nav__link.contacts-nav__link_works(href='#') Обо мне
+					//- li.contacts-nav__item
+					//- 	a.contacts-nav__link.contacts-nav__link_works(href='#') Блог
+					li.contacts-nav__item
+						a.contacts-nav__link.contacts-nav__link_works(href='#') Авторизация
+			include ../parts/socials
+		li.contacts-footer__item
+			blockquote.contacts__blockquote
+				p.blockquote__text Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.
+				cite.blockquote__author - Martin Golding
+	.contacts__footer2
+		span.contacts__footer2-text © Марина Сокуренко | 2018
 //script(src="js/google-map.js"  defer)
 script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQmJCTTL7_ny4EX4bZBmOmypC3RjZa1Wk&callback=initMap" defer)

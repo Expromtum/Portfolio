@@ -28,6 +28,19 @@
   }
 }
 
+%verticalAlignSpan {
+  text-align: center;
+
+  &:after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 0;
+    overflow: hidden;
+    vertical-align: middle;
+  }
+}
+
 @mixin circle($width, $color) {
   width: $width;
   height: $width;

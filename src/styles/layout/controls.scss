@@ -88,7 +88,7 @@ $point-pos: rem(6px);
 
   & span {
     vertical-align: middle;
-    @extend %section-text-font;
+    @extend %section-text-font-regular;
     color: $colorWhite;
   }
 }
@@ -128,11 +128,20 @@ $point-pos: rem(6px);
 
   & span {
     vertical-align: middle;
-    @extend %section-text-font;
+    @extend %section-text-font-regular;
     color: $colorWhite;
   }
 }
 
+blockquote p {
+  @extend %section-text-font-light-italic;
+  color: rgba($colorWhite, 0.5);
+}
+
+blockquote cite {
+  @extend %section-text-font-bold-italic;
+  color: rgba($colorWhite, 0.5);
+}
 
 
 

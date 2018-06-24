@@ -1,6 +1,7 @@
 extends ../main
 include ../../mixins/btn_group
 include ../../mixins/btn
+include ../../mixins/footer
 
 block title
 	title Авторизация
@@ -49,5 +50,4 @@ block content
 				}
 				];
 			+btn_group('login__button-group', loginBtnGroup)
-		footer.main-footer.login__main-footer
-			.main-footer__copyright.login__copyright © Марина Сокуренко | 2018
+		+footer('login__main-footer', '© Марина Сокуренко | 2018')

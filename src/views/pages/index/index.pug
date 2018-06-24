@@ -2,6 +2,7 @@ extends ../main
 include ../../mixins/user
 include ../../mixins/btn_group
 include ../../mixins/btn
+include ../../mixins/footer
 
 block title
 	title Портфолио
@@ -33,5 +34,4 @@ block content
 				}
 				];
 			+btn_group('welcome__button-group', welcomeBtnGroup)
-		footer.main-footer.welcome__main-footer
-			.main-footer__copyright.welcome__copyright © Марина Сокуренко | 2018
+		+footer('contacts__main-footer', '© Марина Сокуренко | 2018')
