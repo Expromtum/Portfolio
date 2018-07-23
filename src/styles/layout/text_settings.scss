@@ -21,9 +21,38 @@
   line-height: 1.3;
 }
 
-%section-text-font {
+/*medium*/
+%section-text-font { 
   font-family: roboto;
   font-size: rem(16);
   font-weight: normal;
-  line-height: 2.1;
+  font-style: normal;
+  line-height: 1.625;  
 }
+
+%section-text-font-light {
+  @extend %section-text-font;
+  font-weight: lighter;
+}
+
+%section-text-font-light-italic {
+  @extend %section-text-font;
+  font-weight: lighter;
+  font-style: italic;
+}
+
+%section-text-font-bold-italic {
+  @extend %section-text-font;
+  font-weight: bold;
+  font-style: italic;
+}
+
+%section-text-font-regular {
+  font-family: roboto;
+  font-size: rem(16);
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.6;  
+}
+
+

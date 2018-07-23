@@ -26,7 +26,7 @@
 }
 
 .user__text {
-  @extend %section-text-font;
+  @extend %section-text-font-regular;
   color: $colorWhite;
   text-align: center;
   margin-top: rem(10);

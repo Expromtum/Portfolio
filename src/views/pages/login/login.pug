@@ -1,0 +1,52 @@
+extends ../main
+include ../../mixins/btn
+include ../../mixins/footer
+
+block title
+	title Авторизация
+block content
+	//Секция Авторизация
+	main.section.login
+		.main-bg.login__main-bg
+			img(src=require("src/images/forest.jpg") alt="")
+		.main-img-mask.login__main-img-mask
+		//Вход
+		form.login__form
+			.login__title.underline АВТОРИЗУЙТЕСЬ
+			.input__col
+				.input__row
+					input(type='text' name='login'  placeholder='Логин' required autofocus autocomplete='on').input__login
+				.input__row
+					input(type='password' name='password' placeholder='Пароль' maxlength='20' autocomplete='current-password' required).input__password
+				.input__row
+					.input__human
+						label.checkbox-button
+							input(type='checkbox' name='human' value='0')
+							span.checkbox-custom
+							span Я человек
+				.input__row
+					.input__robots
+						.input__robots-title Вы точно не робот?
+						.input__robots-radio
+							label.radio-button
+								input(type='radio' name='robot-option' value='yes')
+								span.radio-custom
+								span Да
+							label.radio-button
+								input(type='radio' name='robot-option' value='no')
+								span.radio-custom
+								span Не уверен
+			-
+				var loginBtnGroup = [
+					{
+					title: 'На главную',
+					class_name: 'btn-to-main',
+					url: '#'
+					},{
+					title: 'Войти',
+					class_name: 'btn-login',
+					url: '#'
+					}
+				];
+			+btn_group('login__button-group', loginBtnGroup)
+		+footer('login__main-footer', '© Марина Сокуренко | 2018')

@@ -3,6 +3,7 @@
 
 html {
   font-size: $baseFontSize;
+
   //line-height: 1.4;
 
   //@include laptop {
@@ -29,8 +30,9 @@ html {
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
   background-color: $colorBG;
   position: relative;
-
   overflow-y: scroll;
+  font-weight: normal;
+  font-style: normal;
 }
 
 *,

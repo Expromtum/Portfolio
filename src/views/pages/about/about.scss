@@ -1,6 +1,9 @@
-@import "src/styles/config/mixins";
-@import "src/styles/config/variables";
-@import "src/styles/layout/text_settings";
+//@import 'src/styles/main';
+
+@import 'src/styles/config/mixins';
+@import 'src/styles/config/variables';
+@import 'src/styles/layout/text_settings';
+@import 'src/styles/layout/controls';
 
 .about {
   height: 950px;
@@ -10,7 +13,6 @@
 .about__col {
   position: relative;
   height: 100%;
-  //border: 1px solid blue;
 }
 
 .about__col_left {
@@ -38,7 +40,6 @@
 
 .about__triangle_left {
   fill: $colorBGGray;
- // border: 1px solid green;
 }
 
 .about__triangle_right {
@@ -48,26 +49,20 @@
 .about__content {
   height: 100%;
   padding: rem(10);
-  //border: 1px solid red;
 }
 
 .about__photo {
   margin: 0 auto;
   display: block;
   width: rem(500px);
-  //max-height: 70%;
   max-width: 80%;
-
   height: auto;
-
   padding: rem(20);
 }
 
 .about__title {
   @extend %h1-font;
   color: $colorGrayFontDark;
-  //margin-top: rem(5);
-
 }
 
 .about__me-title {
@@ -80,11 +75,10 @@
   @extend %section-title-font;
   color: $colorGrayFontDark;
   width: 55%;
-
 }
 
 .about__text {
-  @extend %section-text-font;
+  @extend %section-text-font-regular;
   color: $colorGrayFontDark;
   width: 77%;
   display: block;

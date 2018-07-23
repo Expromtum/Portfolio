@@ -1,81 +1,12 @@
-@import "src/styles/blocks/socials";
-@import "src/styles/config/variables";
-@import "src/styles/config/mixins";
-@import "src/styles/layout/controls";
-@import "src/styles/layout/text_settings";
-
-$footerHeight: 50px;
-$maxFooterHeight: 10vh;
+@import 'src/styles/blocks/socials';
+@import 'src/styles/config/variables';
+@import 'src/styles/config/mixins';
+@import 'src/styles/layout/controls';
+@import 'src/styles/layout/text_settings';
+@import 'src/styles/blocks/main_bg';
 
 .wrapper {
   //max-width: 1500px;
-}
-
-.welcome {
-  position: relative;
-  //height: calc(100vh - #{$footerHeight});
-  min-height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-}
-
-.welcome__footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: $footerHeight;
-  text-align: center;
-  max-height: $maxFooterHeight;
-}
-
-.welcome__copyright {
-  @extend %section-text-font;
-  color: $colorWhite;
-  min-height: 100%;
-  vertical-align: middle;
-}
-
-//footer {
-//  position: absolute;
-//  left: 0;
-//  bottom: 0;
-//  width: 100%;
-//  height: $footerHeight;
-//  border: 1px solid red;
-//}
-
-
-
-
-.welcome__bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.welcome__bg img {
-  width: 100%;
-  min-width: 100%;
-  min-height: 100%;
-
-  background-image: linear-gradient(to bottom, black 0%, transparent 100%);
-  background-size: cover;
-  background-position: center;
-}
-
-.welcome__img_mask {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: calc(100% - #{$footerHeight});
-  min-height: calc(100% - #{$maxFooterHeight});
-  background-image: linear-gradient(to bottom, rgba(0,0,0, 0.5) 0%, transparent 20%, transparent 80%, rgba(0,0,0, 0.3) 100%);
-  background-size: cover;
-  background-position: center;
 }
 
 .welcome_autorization_btn {

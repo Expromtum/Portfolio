@@ -1,13 +1,13 @@
 //colors
 $white: #efeee9;
 
-@import "~normalize.css";
-@import "src/styles/config/variables";
-@import "src/styles/config/media";
-@import "src/styles/config/mixins";
-@import "src/styles/layout/adjustment";
-@import "src/styles/layout/fonts";
-@import "src/styles/layout/text_settings";
-@import "src/styles/layout/controls";
+@import '~normalize.css';
+//@import 'src/styles/config/variables';
+//@import 'src/styles/config/media';
+//@import 'src/styles/config/mixins';
+//@import 'src/styles/layout/adjustment';
+@import 'src/styles/layout/fonts';
+//@import 'src/styles/layout/text_settings';
+//@import 'src/styles/layout/controls';
 
 //@import "blocks/**/*.scss";

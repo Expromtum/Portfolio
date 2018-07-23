@@ -1,0 +1,63 @@
+@import 'src/styles/blocks/main_bg';
+@import 'src/styles/blocks/btn_group';
+@import 'src/styles/config/variables';
+@import 'src/styles/config/mixins';
+@import 'src/styles/layout/controls';
+@import 'src/styles/layout/text_settings';
+
+.login .login__form {
+  position: absolute;
+  min-width: rem(380px);
+  padding-top: rem(40px);
+  display: block;
+  overflow: hidden;
+  z-index: 50;
+
+  @include centered('both');
+
+  text-align: center;
+  border-radius: 5px;
+
+  background-color: $colorGreenOpacity;
+
+  & .btn-group {
+    width: 100%;
+  }
+}
+
+.login__title {
+  @extend %section-title-font;
+  color: $colorWhite;
+}
+
+.login__title.underline::after {
+  background-color: $colorWhite;
+}
+
+.input__col {
+  padding: rem(20);
+}
+
+.input__row {
+  width: 100%;
+}
+
+.login .input__login {
+  @include inputTextWithIcon('/images/login.svg');
+  margin-bottom: rem(20);
+}
+
+.login .input__password {
+  @include inputTextWithIcon('/images/password.svg');
+  margin-bottom: rem(20);
+}
+
+.login .input__robots-title {
+  @extend %section-text-font;
+  color: $colorWhite;
+  font-weight: bold;
+}
+
+.login .input__robots-radio .radio-button {
+  margin: 0 10%;
+}
