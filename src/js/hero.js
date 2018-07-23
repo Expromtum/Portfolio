@@ -23,7 +23,7 @@ var parallax = (function () {
 }());
 
 $(window).scroll(function(){
-    var wScroll = window.pageYOffset; //Текущая прокрутка сверху
+    var wScroll = window.pageYOffset; // Текущая прокрутка сверху
     parallax.init(wScroll);
 
     // console.log(wScroll);
