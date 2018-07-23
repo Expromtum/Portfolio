@@ -1,8 +1,18 @@
-mixin skill(title, procent)
-	p.skill=title
+mixin skill(title_array, procent)
+	svg.circles(viewBox='0 0 110 110')
+		circle.circle__first(r='45', cx='50%', cy='50%', fill='none')
+		circle.circle__second(class='circle-' + procent, r='45', cx='50%', cy='50%', fill='none', transform='rotate(-90 55 55)')
+		- vertical_procent_first = 100/(2 + (0.4*(title_array.length-1)))
+		each title_item, index in title_array
+			if index > 2
+				- break
+			else
+				text.skill__title(x='50%', y=(vertical_procent_first + (index * 15)) + '%', fill='none', text-anchor='middle', alignment-baseline='middle')= title_item
 
-mixin skill_group(userClass,title,skill_group)
-	.skill-group(class=userClass)
-		.skill__title=title
+
+mixin skill_group(userClass, title, skill_group)
+	ul.skill-group(class=userClass)
+		.skill-group__title=title
 		each skill_item in skill_group
-			+skill(skill_item.title, skill_item.procent)
+			li.skill__item
+				+skill(skill_item.title, skill_item.procent)
