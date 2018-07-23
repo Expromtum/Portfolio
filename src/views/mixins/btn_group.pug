@@ -1,6 +1,0 @@
-include btn
-
-mixin btn_group(userClass, btn_group)
-	.btn-group(class=userClass)
-		each btn_item in btn_group
-			+btn(btn_item.title, btn_item.class_name)

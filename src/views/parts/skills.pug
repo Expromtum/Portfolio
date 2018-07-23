@@ -1,0 +1,55 @@
+include ../mixins/skill
+
+ul.skills
+	li.skill
+		-
+			var skillGroupFrontend = [
+			{
+			title: 'HTML5',
+			procent: 50
+			},{
+			title: 'CSS3',					
+			procent: 50
+			},{
+			title: 'JavaScript & jQuery',					
+			procent: 45
+			}
+			];
+		+skill_group('skill-group', 'Frontend', skillGroupFrontend)
+	li.skill
+		-
+			var skillGroupBackend = [
+			{
+			title: 'Oracle Data Architect',
+			procent: 85
+			},{
+			title: 'Oracle Pl/SQL',					
+			procent: 85
+			},{
+			title: 'Java',					
+			procent: 65
+			},{			
+			},{
+			title: 'Node.js & NPM',					
+			procent: 40
+			},{
+			title: 'PostgreSQL',					
+			procent: 30
+			}		
+			];
+		+skill_group('skill-group', 'Backend', skillGroupBackend)
+	li.skill
+		-
+			var skillGroupWorkFlow = [
+			{
+			title: 'GIT',
+			procent: 80
+			},{
+			title: 'Gulp',					
+			procent: 65
+			},{
+			title: 'Webpack',					
+			procent: 50
+			}	
+			];
+		+skill_group('skill-group', 'WorkFlow', skillGroupWorkFlow)

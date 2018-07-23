@@ -1,5 +1,4 @@
 extends ../main
-include ../../mixins/btn_group
 include ../../mixins/btn
 include ../../mixins/footer
 
@@ -39,15 +38,15 @@ block content
 								span Не уверен
 			-
 				var loginBtnGroup = [
-				{
-				title: 'На главную',
-				class_name: 'btn-to-main',
-				url: '#'
-				},{
-				title: 'Войти',
-				class_name: 'btn-login',
-				url: '#'
-				}
+					{
+					title: 'На главную',
+					class_name: 'btn-to-main',
+					url: '#'
+					},{
+					title: 'Войти',
+					class_name: 'btn-login',
+					url: '#'
+					}
 				];
 			+btn_group('login__button-group', loginBtnGroup)
 		+footer('login__main-footer', '© Марина Сокуренко | 2018')

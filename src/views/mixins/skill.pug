@@ -1,0 +1,8 @@
+mixin skill(title, procent)
+	p.skill=title
+
+mixin skill_group(userClass,title,skill_group)
+	.skill-group(class=userClass)
+		.skill__title=title
+		each skill_item in skill_group
+			+skill(skill_item.title, skill_item.procent)
