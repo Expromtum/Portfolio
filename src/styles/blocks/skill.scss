@@ -10,8 +10,8 @@
 
 .skill__item {
   display: inline-block;
-  width: rem(100);
-  height: rem(100);
+  width: 100px;
+  height: 100px;
   margin: rem(10);
 }
 
@@ -20,12 +20,12 @@
   stroke-width: rem(10);
 }
 .circle__first {
-  stroke: #dfdcd5;
+  stroke: $colorLightGray;
 }
 .circle__second {
   stroke: $colorGreenHover;
   stroke-dasharray: .0010 282.6;
-  transition: all 1s;
+  transition: stroke 1s, stroke-dasharray 1s;
 }
 
 .skill__title {

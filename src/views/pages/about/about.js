@@ -4,6 +4,7 @@ import 'src/views/pages/about/about.scss';
 import 'src/styles/blocks/hero.scss';
 import 'src/styles/blocks/user.scss';
 import 'src/styles/blocks/contacts.scss';
+import 'src/styles/blocks/dbl_footer.scss';
 import 'src/styles/blocks/hero.scss';
 import 'src/styles/blocks/skill.scss';
 

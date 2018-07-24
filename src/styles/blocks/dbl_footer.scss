@@ -1,0 +1,77 @@
+@import "src/styles/config/mixins";
+@import "src/styles/config/variables";
+@import "src/styles/layout/text_settings";
+
+.dbl-footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  max-height: 35vh;
+  z-index: 100;
+}
+
+.dbl-footer__list {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: baseline;
+
+  max-height: 75%;
+  width: 100%;
+  background-color: $colorGreenOpacity;
+  padding: rem(20) 0 rem(20) 0;
+}
+
+.dbl-footer__item {
+  max-width: 33%;
+  height: 100%;
+  padding: 0 rem(20) 0 rem(20);
+}
+
+.dbl-footer__about-site {
+  @extend %section-text-font-light;
+  color: $colorWhite;
+}
+
+.dbl-footer__2{
+  height: 50px;
+  max-height: 25%;
+  width: 100%;
+  background-color: $colorGreenLightOpacity;
+  @extend %verticalAlignSpan;
+}
+
+.dbl-footer__author {
+  @extend %section-text-font-regular;
+  color: $colorWhite;
+  min-height: 100%;
+  vertical-align: middle;
+}
+
+.dbl-footer__nav {
+  margin-bottom: rem(20);
+}
+
+.dbl-footer-nav__list {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+.dbl-footer-nav__item {
+  padding-right: rem(15);
+}
+
+.dbl-footer-nav__link {
+  @extend %section-text-font;
+  color: $colorWhite;
+  text-decoration: none;
+
+  &:hover {
+    color: $colorGreenHover;
+  }
+}
