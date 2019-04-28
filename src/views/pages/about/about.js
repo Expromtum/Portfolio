@@ -10,5 +10,6 @@ import 'src/styles/blocks/skill.scss';
 
 //js
 import 'src/js/hero.js';
+import 'src/js/nav_overlay.js';
 import 'src/js/skill.js';
 import 'src/js/google-map.js';

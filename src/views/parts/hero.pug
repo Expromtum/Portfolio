@@ -1,26 +1,18 @@
 include ../mixins/user
+include ../mixins/nav
 
 section.section.hero
 	.hero__bg
 		img(src=require('src/images/forest.jpg') alt='')
 	.container
-		//Социальные кнопки и кнопка меню
 		header.hero__header
 			include ../parts/socials
-			nav.hamburger.hero__hamburger
-				.hamburger_compact.active
-					.a(href='#' class='hamburger__link')
-						+svg-on-page('hamburger', 'hover-svg-icon hamburger hamburger__icon')
-				.hamburger_full
-					.a(href='#' class='hamburger__link')
-						+svg-on-page('hamburger', 'hover-svg-icon hamburger hamburger__icon')
-
+			.element-overlay
+				+hamburger('hero__hamburger')
 		.transparent-title.hero__transparent-title
 			+svg-on-page('portfolio_header', 'transparent-title__img')
-
 		//Фото разработчика
 		.hero__user
 			+user('', 'Марина Сокуренко', 'Личный сайт разработчика')
-
 		.hero__arrow
 			+svg-on-page('portf_arrow_down','hover-svg-icon arrow hero__arrow-img')

@@ -3,7 +3,7 @@ function isVisible(tag) {
     var w = $(window);
     var wt = w.scrollTop();
     var tt = t.offset().top;
-    var tb = tt + t.height();
+    var tb = tt + (t.height() / 2); // Если видна половина элемента, считаем, что он видимый
 
     return ((tb <= wt + w.height()) && (tt >= wt));
 }

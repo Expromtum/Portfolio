@@ -1,0 +1,21 @@
+mixin nav(navClass, navType)
+	nav(class=navClass)
+		ul(class='nav__list' + ' nav__list_' + navType)
+			li.nav__item
+				a.nav__link.nav__link_works(href='works.html') Мои работы
+			li.nav__item
+				a.nav__link.nav__link_about(href='about.html#about') Обо мне
+			li.nav__item
+				a.nav__link.nav__link_autorization(href='login.html') Авторизация
+
+mixin hamburger(hamburgerClass)
+	.hamburger(class=hamburgerClass)
+		+nav('hamburger__nav', 'column')
+		.hamburger__btn-list
+			//+nav('hamburger__nav', 'column')
+			.hamburger__btn.hamburger__btn_open.active
+				.a(href='#' class='hamburger__link')
+					+svg-on-page('hamburger', 'hover-svg-icon hamburger__icon')
+			.hamburger__btn.hamburger__btn_close
+				.a(href='#' class='hamburger__link')
+					+svg-on-page('hamburger_close', 'hover-svg-icon hamburger__icon')

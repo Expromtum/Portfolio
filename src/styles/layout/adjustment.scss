@@ -30,7 +30,7 @@ html {
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
   background-color: $colorBG;
   position: relative;
-  overflow-y: scroll;
+  //overflow-y: scroll; => body больше wrapper
   font-weight: normal;
   font-style: normal;
 }

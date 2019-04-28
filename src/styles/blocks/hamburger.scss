@@ -1,23 +1,72 @@
 @import "src/styles/config/mixins.scss";
 @import "src/styles/config/variables.scss";
+@import "src/styles/layout/text_settings.scss";
 
 .hamburger__icon {
   width: rem(40px);
   height: rem(35px);
 }
 
-.hamburger_compact:not(.active){
+.hamburger__btn-list {
+  position: fixed;
+  top: rem(30);
+  right: 2.5%;
+}
+
+.hamburger__btn-list {
+  display: inline-block;;
+}
+
+.hamburger__btn_open:not(.active){
   display: none;
 }
 
-.hamburger_compact.active {
+.hamburger__btn_open.active {
   display: block;
 }
 
-.hamburger_full:not(.active) {
+.hamburger__btn_close:not(.active) {
   display: none;
 }
 
-.hamburger_full.active {
+.hamburger__btn_close.active {
   display: block;
+}
+
+.hamburger__nav {
+  display: none;
+}
+
+.hamburger__nav .nav__link {
+  text-transform: uppercase;
+  @extend %h1-font;
+}
+
+.hamburger__nav .nav__link:hover{
+  color: $colorDarkGray;
+}
+
+// Делаем главное меню видимым
+.hamburger__nav-overlay {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $colorGreenOverlayMenu;
+  opacity: 0.97;
+  z-index: 500;
+}
+
+.hamburger__nav-overlay .hamburger__nav {
+  display: inline-block;
+  height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hamburger__nav-overlay .hamburger__icon:hover {
+  fill: $colorDarkGray;
 }

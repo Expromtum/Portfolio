@@ -1,6 +1,5 @@
-@import "src/styles/config/mixins.scss";
-@import "src/styles/config/variables.scss";
-//@import 'src/icons/underline.svg';
+@import 'src/styles/config/mixins.scss';
+@import 'src/styles/config/variables.scss';
 
 .hover-svg-icon {
   fill: $colorWhite;
@@ -13,7 +12,7 @@
 
 .underline::after {
   display: block;
-  content: " ";
+  content: ' ';
   margin: 0 auto;
   font-size: 0;
 
@@ -25,9 +24,9 @@
   background-color: $colorGrayFontDark;
 }
 
-input[type="text"],
-input[type="number"],
-input[type="password"],
+input[type='text'],
+input[type='number'],
+input[type='password'],
 textarea {
   border-radius: 20px;
   border: 1px solid transparent;
@@ -54,7 +53,7 @@ $point-pos: rem(6px);
   vertical-align: middle;
   position: relative;
 
-  & input[type="radio"] {
+  & input[type='radio'] {
     display: none;
   }
 
@@ -69,8 +68,8 @@ $point-pos: rem(6px);
     margin-right: rem(10px);
   }
 
-  & input[type="radio"]:checked + .radio-custom::before {
-    content: "";
+  & input[type='radio']:checked + .radio-custom::before {
+    content: '';
     display: block;
     position: absolute;
     top: $point-pos;
@@ -82,7 +81,7 @@ $point-pos: rem(6px);
   }
 
   & .radio-custom,
-  & input[type="radio"]:checked + .radio-custom::before {
+  & input[type='radio']:checked + .radio-custom::before {
     border-radius: 50%;
   }
 
@@ -98,7 +97,7 @@ $point-pos: rem(6px);
   vertical-align: middle;
   position: relative;
 
-  & input[type="checkbox"] {
+  & input[type='checkbox'] {
     display: none;
   }
 
@@ -113,8 +112,8 @@ $point-pos: rem(6px);
     margin-right: rem(10px);
   }
 
-  & input[type="checkbox"]:checked + .checkbox-custom::before{
-    content: "";
+  & input[type='checkbox']:checked + .checkbox-custom::before{
+    content: '';
     display: block;
     position: absolute;
     top: 0;

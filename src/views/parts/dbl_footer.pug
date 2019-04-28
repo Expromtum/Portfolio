@@ -1,17 +1,12 @@
+include ../mixins/nav
+
 footer.dbl-footer
 	.dbl-footer__1
 		ul.dbl-footer__list
 			li.dbl-footer__item
 				span.dbl-footer__about-site Этот сайт сделан в рамках самостоятельного обучения
 			li.dbl-footer__item
-				nav.dbl-footer__nav
-					ul.dbl-footer-nav__list
-						li.dbl-footer-nav__item
-							a.dbl-footer-nav__link.dbl-footer-nav__link_works(href='#') Мои работы
-						li.dbl-footer-nav__item
-							a.dbl-footer-nav__link.dbl-footer-nav__link_works(href='#') Обо мне
-						li.dbl-footer-nav__item
-							a.ndbl-footer-nav__link.dbl-footer-nav__link_works(href='#') Авторизация
+				+nav('dbl-footer__nav', 'row')
 				include ../parts/socials
 			li.dbl-footer__item
 				blockquote.dbl-footer__blockquote

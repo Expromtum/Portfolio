@@ -1,0 +1,38 @@
+.nav__list {
+  margin: 0;
+  display: flex;
+  height: 100%;
+
+  // Горизонтальное выравнивание пунктов меню (в строку)
+  &_row {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+
+    & .nav__item {
+      padding-right: rem(15);
+    }
+  }
+
+  // Вертикальное выравнивание пунктов меню (в столбик)
+  &_column {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & .nav__item {
+
+    }
+  }
+}
+
+.nav__link {
+  @extend %section-text-font;
+  color: $colorWhite;
+  text-decoration: none;
+
+  &:hover {
+    color: $colorGreenHover;
+  }
+}
+
